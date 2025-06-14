@@ -1,0 +1,1565 @@
+<?php
+session_start();
+$page_title = "Home";
+include '../utility/header.php';
+?>
+
+<!-- Hero Section with Animated Background -->
+<section class="relative min-h-screen bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden transition-colors duration-300">
+    <!-- Animated Background Elements -->
+   
+
+    <!-- Medical Pattern Overlay -->
+    <div class="absolute inset-0 bg-medical-pattern opacity-5"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <!-- <div class="mb-6">
+                    <span class="inline-block px-4 py-2 bg-gradient-to-r from-primary-100 to-secondary-100 text-primary-700 rounded-full text-sm font-medium mb-4 animate-pulse-slow">
+                        🚀 Next-Generation Healthcare Platform
+                    </span>
+                </div> -->
+                <h1 class="text-4xl md:text-5xl font-bold font-display mb-6 leading-tight">
+                    <span class="bg-gradient-to-r from-primary-600 via-secondary-600 to-accent-600 bg-clip-text text-transparent animate-gradient bg-300% bg-size-200">
+                        Your Health, Our Priority
+                    </span>
+                    <!-- <br>
+                    <span class="text-gray-800 dark:text-gray-200">Healthcare</span>
+                    <br>
+                    <span class="text-gray-600 dark:text-gray-400 text-4xl md:text-5xl">Revolution</span> -->
+                </h1>
+                <p class="text-xl mb-8 text-gray-600 dark:text-gray-300 leading-relaxed">
+                    Experience the future of healthcare management with AI-powered diagnostics,
+                    seamless patient care, and revolutionary medical technology that puts your health first.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                    <a href="/hospital/auth/login.php" class="group bg-gradient-to-r from-primary-500 to-primary-400 text-white hover:from-primary-400 hover:to-primary-300 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 text-center shadow-lg hover:shadow-2xl hover:scale-105 transform">
+                        <i class="fas fa-rocket mr-2 group-hover:animate-bounce"></i> Launch Portal
+                    </a>
+                    <a href="#services" class="group bg-white text-gray-700 hover:text-primary-600 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 text-center border-2 border-gray-200 hover:border-primary-300 hover:shadow-lg hover:scale-105 transform">
+                        <i class="fas fa-play mr-2 group-hover:animate-pulse"></i> Explore Services
+                    </a>
+                </div>
+
+                <!-- Trust Indicators -->
+                <div class="flex items-center space-x-6 text-sm text-gray-500">
+                    <div class="flex items-center">
+                        <i class="fas fa-shield-alt text-accent-500 mr-2"></i>
+                        <span>WHO Compliant</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-award text-primary-500 mr-2"></i>
+                        <span>EMA Certified</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-lock text-secondary-500 mr-2"></i>
+                        <span>Data Protected</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image Section - Responsive -->
+            <div class="relative w-full h-64 sm:h-80 md:h-96 lg:h-[400px] overflow-hidden rounded-2xl shadow-2xl" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <!-- Hero Image with Overlay -->
+                <div class="">
+                    <img src="../images/hero.jpg"
+                         alt="Advanced Healthcare Technology"
+                         class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105">
+                    <!-- Gradient Overlay for better text readability -->
+                    <!-- <div class="absolute inset-0 bg-gradient-to-r from-primary-900/60 via-transparent to-secondary-900/60"></div> -->
+                </div>
+            
+
+                
+            </div>
+        
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="about" class="py-20 bg-white dark:bg-gray-900 relative overflow-hidden transition-colors duration-300">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5 dark:opacity-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-medical-pattern"></div>
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="absolute top-20 right-20 w-40 h-40 bg-gradient-to-r from-yuki-200/30 to-carte-200/30 rounded-full blur-xl animate-float"></div>
+    <div class="absolute bottom-20 left-20 w-32 h-32 bg-gradient-to-r from-medical-200/30 to-yuki-200/30 rounded-full blur-xl animate-float" style="animation-delay: 3s;"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="inline-block px-4 py-2 bg-gradient-to-r from-yuki-100 to-carte-100 dark:from-yuki-900/30 dark:to-carte-900/30 text-yuki-700 dark:text-yuki-300 rounded-full text-sm font-medium mb-4">
+                🏥 Our Story
+            </span>
+            <h2 class="text-4xl md:text-5xl font-bold font-display text-gray-900 dark:text-white mb-6">
+                About <span class="bg-gradient-to-r from-yuki-600 to-carte-600 bg-clip-text text-transparent">Yuki Care</span>
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                Pioneering the future of healthcare through innovation, compassion, and cutting-edge medical technology
+            </p>
+        </div>
+
+        <!-- Clean 2-Column Layout: Image + Mission/Vision -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <!-- Left Column: Image -->
+            <div class="relative" data-aos="fade-right">
+                <div class="relative overflow-hidden rounded-3xl shadow-2xl">
+                    <img src="../images/about1.jfif" alt="Yuki Carte Healthcare Facility" class="w-full h-[500px] object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-yuki-900/20 to-transparent"></div>
+                </div>
+            </div>
+
+            <!-- Right Column: Mission & Vision Content -->
+            <div class="space-y-8" data-aos="fade-left">
+                <!-- Mission -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-gradient-to-r from-yuki-500 to-carte-500 p-3 rounded-xl">
+                            <i class="fas fa-bullseye text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Our Mission</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
+                        To revolutionize healthcare delivery through innovative technology, compassionate care, and
+                        evidence-based medicine. We strive to make quality healthcare accessible, efficient, and
+                        patient-centered for every individual we serve.
+                    </p>
+                    <div class="flex items-center text-yuki-600 dark:text-yuki-400 font-medium">
+                        <i class="fas fa-heart mr-2"></i>
+                        <span>Compassionate Care First</span>
+                    </div>
+                </div>
+
+                <!-- Vision -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-gradient-to-r from-medical-500 to-yuki-500 p-3 rounded-xl">
+                            <i class="fas fa-eye text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Our Vision</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
+                        To be the leading healthcare institution that seamlessly integrates advanced medical technology
+                        with human compassion, setting new standards for patient care and medical excellence globally.
+                    </p>
+                    <div class="flex items-center text-medical-600 dark:text-medical-400 font-medium">
+                        <i class="fas fa-rocket mr-2"></i>
+                        <span>Innovation in Healthcare</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Core Values -->
+        <div class="mb-16" data-aos="fade-up">
+            <h3 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+                Our <span class="bg-gradient-to-r from-carte-600 to-medical-600 bg-clip-text text-transparent">Core Values</span>
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Compassion -->
+                <div class="text-center group" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="relative mb-6">
+                        <div class="absolute inset-0 bg-gradient-to-r from-yuki-400 to-carte-400 rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
+                        <div class="relative bg-gradient-to-r from-yuki-100 to-carte-100 dark:from-yuki-900/30 dark:to-carte-900/30 rounded-full w-20 h-20 flex items-center justify-center mx-auto group-hover:scale-110 transition-all duration-300">
+                            <i class="fas fa-heart text-yuki-600 dark:text-yuki-400 text-3xl group-hover:animate-pulse"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Compassion</h4>
+                    <p class="text-gray-600 dark:text-gray-300">Every patient receives care with empathy, respect, and understanding</p>
+                </div>
+
+                <!-- Integrity -->
+                <div class="text-center group" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="relative mb-6">
+                        <div class="absolute inset-0 bg-gradient-to-r from-medical-400 to-yuki-400 rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
+                        <div class="relative bg-gradient-to-r from-medical-100 to-yuki-100 dark:from-medical-900/30 dark:to-yuki-900/30 rounded-full w-20 h-20 flex items-center justify-center mx-auto group-hover:scale-110 transition-all duration-300">
+                            <i class="fas fa-shield-alt text-medical-600 dark:text-medical-400 text-3xl group-hover:animate-pulse"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Integrity</h4>
+                    <p class="text-gray-600 dark:text-gray-300">Honest, transparent, and ethical practices in all our interactions</p>
+                </div>
+
+                <!-- Excellence -->
+                <div class="text-center group" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="relative mb-6">
+                        <div class="absolute inset-0 bg-gradient-to-r from-carte-400 to-medical-400 rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
+                        <div class="relative bg-gradient-to-r from-carte-100 to-medical-100 dark:from-carte-900/30 dark:to-medical-900/30 rounded-full w-20 h-20 flex items-center justify-center mx-auto group-hover:scale-110 transition-all duration-300">
+                            <i class="fas fa-star text-carte-600 dark:text-carte-400 text-3xl group-hover:animate-pulse"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Excellence</h4>
+                    <p class="text-gray-600 dark:text-gray-300">Continuous improvement and the highest standards in medical care</p>
+                </div>
+            </div>
+        </div>
+
+        
+<!-- About Hospital Section -->
+        <!-- Our Journey - Redesigned 2-Column Layout -->
+        <div class="bg-gradient-to-r from-gray-100 to-gray-100 dark:from-gray-800 dark:to-gray-700 rounded-3xl p-8 md:p-12" data-aos="fade-up">
+            <h3 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+                Our <span class="bg-gradient-to-r from-yuki-600 to-carte-600 bg-clip-text text-transparent">Journey</span>
+            </h3>
+
+            <!-- 2-Column Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Left Column: Image Gallery -->
+                <div class="space-y-6" data-aos="fade-right">
+                    <!-- 2x2 Image Grid with Enhanced Heights -->
+                    <div class="grid grid-cols-2 gap-6">
+                        <!-- Foundation Image -->
+                        <div class="relative group overflow-hidden rounded-2xl shadow-lg mb-6" data-aos="fade-in" data-aos-delay="100">
+                            <img src="../images/2021.webp" alt="Foundation 2020" class="w-full h-40 sm:h-48 lg:h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-yuki-900/60 to-transparent"></div>
+                            <div class="absolute bottom-3 left-3 text-white text-base font-bold">2020</div>
+                        </div>
+
+                        <!-- Expansion Image -->
+                        <div class="relative group overflow-hidden rounded-2xl shadow-lg mb-6" data-aos="fade-in" data-aos-delay="200">
+                            <img src="../images/2021.jpg" alt="Expansion 2021" class="w-full h-40 sm:h-48 lg:h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-medical-900/60 to-transparent"></div>
+                            <div class="absolute bottom-3 left-3 text-white text-base font-bold">2021</div>
+                        </div>
+
+                        <!-- Innovation Image -->
+                        <div class="relative group overflow-hidden rounded-2xl shadow-lg" data-aos="fade-in" data-aos-delay="300">
+                            <img src="../images/2022.png" alt="Innovation 2022" class="w-full h-40 sm:h-48 lg:h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-carte-900/60 to-transparent"></div>
+                            <div class="absolute bottom-3 left-3 text-white text-base font-bold">2022</div>
+                        </div>
+
+                        <!-- Excellence Image -->
+                        <div class="relative group overflow-hidden rounded-2xl shadow-lg" data-aos="fade-in" data-aos-delay="400">
+                            <img src="../images/2024.webp" alt="Excellence 2024" class="w-full h-40 sm:h-48 lg:h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-yuki-900/60 to-transparent"></div>
+                            <div class="absolute bottom-3 left-3 text-white text-base font-bold">2024</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Timeline -->
+                <div class="relative" data-aos="fade-left">
+                    <!-- Timeline Steps with Enhanced Spacing -->
+                    <div>
+                        <!-- Step 1: Foundation -->
+                        <div class="relative flex items-start group hover:transform hover:scale-105 transition-all duration-300 mb-20" data-aos="slide-left" data-aos-delay="100">
+                            <div class="relative z-10 bg-gradient-to-r from-yuki-500 to-carte-500 text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+                                2020
+                                <!-- Enhanced dotted line to next step -->
+                                <div class="absolute top-16 left-1/2 transform -translate-x-1/2 w-1 h-20 border-l-4 border-dotted border-yuki-400 dark:border-yuki-300 opacity-70"></div>
+                            </div>
+                            <div class="ml-6 bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg group-hover:shadow-xl transition-all duration-300 flex-1 border border-gray-100 dark:border-gray-700">
+                                <h4 class="font-bold text-gray-900 dark:text-white mb-2 text-lg">Foundation</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Yuki Carte was established with a vision to transform healthcare</p>
+                                <div class="mt-3 flex items-center text-yuki-600 dark:text-yuki-400 text-sm font-medium">
+                                    <i class="fas fa-building mr-2"></i>
+                                    <span>Healthcare Vision</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Expansion -->
+                        <div class="relative flex items-start group hover:transform hover:scale-105 transition-all duration-300 mb-20" data-aos="slide-left" data-aos-delay="200">
+                            <div class="relative z-10 bg-gradient-to-r from-medical-500 to-yuki-500 text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+                                2021
+                                <!-- Enhanced dotted line to next step -->
+                                <div class="absolute top-16 left-1/2 transform -translate-x-1/2 w-1 h-20 border-l-4 border-dotted border-medical-400 dark:border-medical-300 opacity-70"></div>
+                            </div>
+                            <div class="ml-6 bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg group-hover:shadow-xl transition-all duration-300 flex-1 border border-gray-100 dark:border-gray-700">
+                                <h4 class="font-bold text-gray-900 dark:text-white mb-2 text-lg">Expansion</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Opened specialized departments and advanced medical facilities</p>
+                                <div class="mt-3 flex items-center text-medical-600 dark:text-medical-400 text-sm font-medium">
+                                    <i class="fas fa-expand-arrows-alt mr-2"></i>
+                                    <span>Facility Growth</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Innovation -->
+                        <div class="relative flex items-start group hover:transform hover:scale-105 transition-all duration-300 mb-20" data-aos="slide-left" data-aos-delay="300">
+                            <div class="relative z-10 bg-gradient-to-r from-carte-500 to-medical-500 text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+                                2022
+                                <!-- Enhanced dotted line to next step -->
+                                <div class="absolute top-16 left-1/2 transform -translate-x-1/2 w-1 h-20 border-l-4 border-dotted border-carte-400 dark:border-carte-300 opacity-70"></div>
+                            </div>
+                            <div class="ml-6 bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg group-hover:shadow-xl transition-all duration-300 flex-1 border border-gray-100 dark:border-gray-700">
+                                <h4 class="font-bold text-gray-900 dark:text-white mb-2 text-lg">Innovation</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Integrated AI-powered diagnostics and telemedicine services</p>
+                                <div class="mt-3 flex items-center text-carte-600 dark:text-carte-400 text-sm font-medium">
+                                    <i class="fas fa-lightbulb mr-2"></i>
+                                    <span>Tech Integration</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Excellence -->
+                        <div class="relative flex items-start group hover:transform hover:scale-105 transition-all duration-300" data-aos="slide-left" data-aos-delay="400">
+                            <div class="relative z-10 bg-gradient-to-r from-yuki-600 to-carte-600 text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+                                2024
+                                <!-- No dotted line for final step -->
+                            </div>
+                            <div class="ml-6 bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg group-hover:shadow-xl transition-all duration-300 flex-1 border border-gray-100 dark:border-gray-700">
+                                <h4 class="font-bold text-gray-900 dark:text-white mb-2 text-lg">Excellence</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Recognized as a leading healthcare institution with 50K+ patients served</p>
+                                <div class="mt-3 flex items-center text-yuki-600 dark:text-yuki-400 text-sm font-medium">
+                                    <i class="fas fa-trophy mr-2"></i>
+                                    <span>Industry Recognition</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Statistics Section -->
+<section class="py-20 bg-gradient-to-r from-yuki-600 to-yuki-500 text-white relative overflow-hidden">
+    <!-- Animated Background -->
+    <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-yuki-500/20 to-carte-500/10 animate-gradient bg-300%"></div>
+        <div class="absolute top-20 left-20 w-40 h-40 bg-white/10 rounded-full blur-xl animate-float"></div>
+        <div class="absolute bottom-20 right-20 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float" style="animation-delay: 2s;"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold font-display mb-4">
+                Trusted by <span class="text-yellow-300">Thousands</span>
+            </h2>
+            <p class="text-xl text-white/80">Our commitment to excellence in numbers</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="text-center group" data-aos="zoom-in" data-aos-delay="100">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-white/20 rounded-2xl blur-lg group-hover:bg-white/30 transition-all duration-300"></div>
+                    <div class="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 group-hover:scale-105 transition-all duration-300 border border-white/20">
+                        <div class="text-5xl font-bold mb-2 bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+                            500+
+                        </div>
+                        <div class="text-white/80 font-medium">Hospital Beds</div>
+                        <div class="text-sm text-white/60 mt-1">Available 24/7</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center group" data-aos="zoom-in" data-aos-delay="200">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-white/20 rounded-2xl blur-lg group-hover:bg-white/30 transition-all duration-300"></div>
+                    <div class="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 group-hover:scale-105 transition-all duration-300 border border-white/20">
+                        <div class="text-5xl font-bold mb-2 bg-gradient-to-r from-green-300 to-emerald-300 bg-clip-text text-transparent">
+                            150+
+                        </div>
+                        <div class="text-white/80 font-medium">Medical Experts</div>
+                        <div class="text-sm text-white/60 mt-1">Board Certified</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center group" data-aos="zoom-in" data-aos-delay="300">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-white/20 rounded-2xl blur-lg group-hover:bg-white/30 transition-all duration-300"></div>
+                    <div class="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 group-hover:scale-105 transition-all duration-300 border border-white/20">
+                        <div class="text-5xl font-bold mb-2 bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
+                            50K+
+                        </div>
+                        <div class="text-white/80 font-medium">Patients Served</div>
+                        <div class="text-sm text-white/60 mt-1">This Year</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center group" data-aos="zoom-in" data-aos-delay="400">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-white/20 rounded-2xl blur-lg group-hover:bg-white/30 transition-all duration-300"></div>
+                    <div class="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 group-hover:scale-105 transition-all duration-300 border border-white/20">
+                        <div class="text-5xl font-bold mb-2 bg-gradient-to-r from-red-300 to-pink-300 bg-clip-text text-transparent">
+                            24/7
+                        </div>
+                        <div class="text-white/80 font-medium">Emergency Care</div>
+                        <div class="text-sm text-white/60 mt-1">Always Ready</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Stats -->
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="text-center">
+                <div class="text-2xl font-bold text-white mb-1">98.5%</div>
+                <div class="text-sm text-white/70">Patient Satisfaction</div>
+            </div>
+            <div class="text-center">
+                <div class="text-2xl font-bold text-white mb-1">15min</div>
+                <div class="text-sm text-white/70">Avg. Wait Time</div>
+            </div>
+            <div class="text-center">
+                <div class="text-2xl font-bold text-white mb-1">99.9%</div>
+                <div class="text-sm text-white/70">System Uptime</div>
+            </div>
+            <div class="text-center">
+                <div class="text-2xl font-bold text-white mb-1">ISO</div>
+                <div class="text-sm text-white/70">Certified Quality</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Core Services/Departments Section -->
+<section id="departments" class="py-20 bg-gradient-to-br from-gray-50 via-white to-yuki-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 relative overflow-hidden transition-colors duration-300">
+    <!-- Background Elements -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-carte-100/30 to-transparent rounded-full opacity-50 -translate-y-48 translate-x-48"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-r from-medical-100/30 to-transparent rounded-full opacity-50 translate-y-48 -translate-x-48"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="inline-block px-4 py-2 bg-gradient-to-r from-medical-100 to-yuki-100 dark:from-medical-900/30 dark:to-yuki-900/30 text-medical-700 dark:text-medical-300 rounded-full text-sm font-medium mb-4">
+                🏥 Medical Departments
+            </span>
+            <h2 class="text-4xl md:text-5xl font-bold font-display text-gray-900 dark:text-white mb-6">
+                Comprehensive <span class="bg-gradient-to-r from-medical-600 to-yuki-600 bg-clip-text text-transparent">Healthcare</span> Services
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                State-of-the-art medical departments staffed by world-class specialists and equipped with cutting-edge technology
+            </p>
+        </div>
+
+        <!-- Key Services Grid - Limited to 5 Priority Departments -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12">
+            <!-- Emergency Services -->
+            <div class="group" data-aos="zoom-in" data-aos-delay="100">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-red-400 to-orange-400 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
+                        <div class="text-center">
+                            <div class="bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-ambulance text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Emergency Services</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">24/7 critical care with rapid response teams and state-of-the-art emergency facilities</p>
+                            <button class="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-xl text-sm font-medium hover:scale-105 transition-transform duration-200">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cardiology -->
+            <div class="group" data-aos="zoom-in" data-aos-delay="150">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-yuki-400 to-carte-400 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
+                        <div class="text-center">
+                            <div class="bg-gradient-to-r from-yuki-500 to-carte-500 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-heartbeat text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Cardiology</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Advanced heart care with minimally invasive procedures and cardiac rehabilitation</p>
+                            <button class="bg-gradient-to-r from-yuki-500 to-carte-500 text-white px-4 py-2 rounded-xl text-sm font-medium hover:scale-105 transition-transform duration-200">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Surgery -->
+            <div class="group" data-aos="zoom-in" data-aos-delay="200">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-carte-400 to-purple-400 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
+                        <div class="text-center">
+                            <div class="bg-gradient-to-r from-carte-500 to-purple-500 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-cut text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Surgery</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Advanced surgical procedures with robotic assistance and minimally invasive techniques</p>
+                            <button class="bg-gradient-to-r from-carte-500 to-purple-500 text-white px-4 py-2 rounded-xl text-sm font-medium hover:scale-105 transition-transform duration-200">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Maternity -->
+            <div class="group" data-aos="zoom-in" data-aos-delay="250">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-pink-400 to-rose-400 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
+                        <div class="text-center">
+                            <div class="bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-baby text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Maternity</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Complete maternal and newborn care with specialized high-risk pregnancy support</p>
+                            <button class="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-4 py-2 rounded-xl text-sm font-medium hover:scale-105 transition-transform duration-200">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Neurology -->
+            <div class="group" data-aos="zoom-in" data-aos-delay="300">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-medical-400 to-yuki-400 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
+                        <div class="text-center">
+                            <div class="bg-gradient-to-r from-medical-500 to-yuki-500 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-brain text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Neurology</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Comprehensive brain and nervous system care with advanced neuroimaging and treatment</p>
+                            <button class="bg-gradient-to-r from-medical-500 to-yuki-500 text-white px-4 py-2 rounded-xl text-sm font-medium hover:scale-105 transition-transform duration-200">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- View All Services CTA -->
+        <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 rounded-3xl p-8 inline-block">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                    Explore All Our <span class="bg-gradient-to-r from-yuki-600 to-carte-600 bg-clip-text text-transparent">Medical Services</span>
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl">
+                    Discover our complete range of specialized medical departments, including Laboratory, Radiology, Pharmacy, and many more specialized services.
+                </p>
+                <a href="../services/index.php" class="inline-block bg-gradient-to-r from-primary-500 to-primary-400 text-white hover:from-primary-600 hover:to-primary-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 transform">
+                    <i class="fas fa-hospital mr-2"></i> View All Services
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Doctor/Staff Highlights Section -->
+<section id="doctors" class="py-20 bg-gradient-to-br from-yuki-50 via-white to-carte-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 relative overflow-hidden transition-colors duration-300">
+    <!-- Background Elements -->
+    <div class="absolute top-20 left-20 w-40 h-40 bg-gradient-to-r from-medical-200/30 to-yuki-200/30 rounded-full blur-xl animate-float"></div>
+    <div class="absolute bottom-20 right-20 w-32 h-32 bg-gradient-to-r from-carte-200/30 to-medical-200/30 rounded-full blur-xl animate-float" style="animation-delay: 2s;"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="inline-block px-4 py-2 bg-gradient-to-r from-carte-100 to-medical-100 dark:from-carte-900/30 dark:to-medical-900/30 text-carte-700 dark:text-carte-300 rounded-full text-sm font-medium mb-4">
+                👨‍⚕️ Medical Experts
+            </span>
+            <h2 class="text-4xl md:text-5xl font-bold font-display text-gray-900 dark:text-white mb-6">
+                Meet Our <span class="bg-gradient-to-r from-carte-600 to-medical-600 bg-clip-text text-transparent">Expert</span> Team
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                World-renowned specialists dedicated to providing exceptional healthcare with compassion and expertise
+            </p>
+        </div>
+
+        <!-- Featured Doctors Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <!-- Dr. Sarah Chen -->
+            <div class="group" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-yuki-400 to-carte-400 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700">
+                        <!-- Doctor Image -->
+                        <div class="relative mb-6">
+                            <div class="w-24 h-24 bg-gradient-to-r from-yuki-400 to-carte-400 rounded-full mx-auto group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+                                <img src="../images/dr3.png" alt="Dr. Sarah Chen - Chief of Cardiology" class="w-full h-full object-cover object-center">
+                            </div>
+                            <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                                <span class="bg-gradient-to-r from-medical-500 to-yuki-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                                    Chief of Cardiology
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Dr. Sarah Chen</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                                Board-certified cardiologist with 15+ years of experience in interventional cardiology and heart surgery.
+                            </p>
+
+                            <!-- Credentials -->
+                            <div class="flex flex-wrap justify-center gap-2 mb-4">
+                                <span class="bg-yuki-100 dark:bg-yuki-900/30 text-yuki-700 dark:text-yuki-300 px-2 py-1 rounded-full text-xs">MD, PhD</span>
+                                <span class="bg-carte-100 dark:bg-carte-900/30 text-carte-700 dark:text-carte-300 px-2 py-1 rounded-full text-xs">Harvard Medical</span>
+                                <span class="bg-medical-100 dark:bg-medical-900/30 text-medical-700 dark:text-medical-300 px-2 py-1 rounded-full text-xs">15+ Years</span>
+                            </div>
+
+                            <a href="../book-appointment/" class="bg-gradient-to-r from-yuki-500 to-carte-500 text-white px-6 py-2 rounded-xl text-sm font-medium hover:scale-105 transition-transform duration-200 w-full inline-block text-center">
+                                <i class="fas fa-calendar-alt mr-2"></i> Book Appointment
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dr. Michael Rodriguez -->
+            <div class="group" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-medical-400 to-yuki-400 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700">
+                        <!-- Doctor Image -->
+                        <div class="relative mb-6">
+                            <div class="w-24 h-24 bg-gradient-to-r from-medical-400 to-yuki-400 rounded-full mx-auto group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+                                <img src="../images/dr2.jpg" alt="Dr. Michael Rodriguez - Head of Neurology" class="w-full h-full object-cover object-center">
+                            </div>
+                            <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                                <span class="bg-gradient-to-r from-carte-500 to-medical-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                                    Head of Neurology
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Dr. Michael Rodriguez</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                                Renowned neurologist specializing in brain surgery, stroke treatment, and neurological disorders.
+                            </p>
+
+                            <!-- Credentials -->
+                            <div class="flex flex-wrap justify-center gap-2 mb-4">
+                                <span class="bg-medical-100 dark:bg-medical-900/30 text-medical-700 dark:text-medical-300 px-2 py-1 rounded-full text-xs">MD, FAANS</span>
+                                <span class="bg-yuki-100 dark:bg-yuki-900/30 text-yuki-700 dark:text-yuki-300 px-2 py-1 rounded-full text-xs">Johns Hopkins</span>
+                                <span class="bg-carte-100 dark:bg-carte-900/30 text-carte-700 dark:text-carte-300 px-2 py-1 rounded-full text-xs">20+ Years</span>
+                            </div>
+
+                            <a href="../book-appointment/" class="bg-gradient-to-r from-medical-500 to-yuki-500 text-white px-6 py-2 rounded-xl text-sm font-medium hover:scale-105 transition-transform duration-200 w-full inline-block text-center">
+                                <i class="fas fa-calendar-alt mr-2"></i> Book Appointment
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dr. Emily Watson -->
+            <div class="group" data-aos="fade-up" data-aos-delay="300">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-carte-400 to-pink-400 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700">
+                        <!-- Doctor Image -->
+                        <div class="relative mb-6">
+                            <div class="w-24 h-24 bg-gradient-to-r from-carte-400 to-pink-400 rounded-full mx-auto group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+                                <img src="../images/dr1.jpg" alt="Dr. Emily Watson - Maternity Specialist" class="w-full h-full object-cover object-center">
+                            </div>
+                            <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                                <span class="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                                    Maternity Specialist
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Dr. Emily Watson</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                                Expert in maternal-fetal medicine, high-risk pregnancies, and comprehensive women's health.
+                            </p>
+
+                            <!-- Credentials -->
+                            <div class="flex flex-wrap justify-center gap-2 mb-4">
+                                <span class="bg-carte-100 dark:bg-carte-900/30 text-carte-700 dark:text-carte-300 px-2 py-1 rounded-full text-xs">MD, FACOG</span>
+                                <span class="bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 px-2 py-1 rounded-full text-xs">Stanford Medical</span>
+                                <span class="bg-medical-100 dark:bg-medical-900/30 text-medical-700 dark:text-medical-300 px-2 py-1 rounded-full text-xs">12+ Years</span>
+                            </div>
+
+                            <a href="../book-appointment/" class="bg-gradient-to-r from-carte-500 to-pink-500 text-white px-6 py-2 rounded-xl text-sm font-medium hover:scale-105 transition-transform duration-200 w-full inline-block text-center">
+                                <i class="fas fa-calendar-alt mr-2"></i> Book Appointment
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- View All Doctors CTA -->
+        <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 rounded-3xl p-8 inline-block">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                    Meet Our Complete <span class="bg-gradient-to-r from-carte-600 to-medical-600 bg-clip-text text-transparent">Medical Team</span>
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl">
+                    Our hospital is home to over 150 board-certified physicians and specialists across all medical disciplines,
+                    each committed to providing exceptional patient care.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-gradient-to-r from-primary-500 to-primary-400 text-white hover:from-primary-600 hover:to-primary-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 transform">
+                        <i class="fas fa-users mr-2"></i> View All Doctors
+                    </button>
+                    <button class="bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-2 border-gray-200 dark:border-gray-600 hover:border-carte-300 dark:hover:border-carte-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 transform">
+                        <i class="fas fa-search mr-2"></i> Find a Specialist
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Appointment Booking Section -->
+<section class="py-20 bg-gradient-to-r from-yuki-600 to-yuki-500 text-white relative overflow-hidden">
+    <!-- Animated Background -->
+    <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-yuki-500/20 to-carte-500/10 animate-gradient bg-300%"></div>
+        <div class="absolute top-20 left-20 w-40 h-40 bg-white/10 rounded-full blur-xl animate-float"></div>
+        <div class="absolute bottom-20 right-20 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float" style="animation-delay: 2s;"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold font-display mb-6">
+                Book Your <span class="text-yellow-300">Appointment</span> Today
+            </h2>
+            <p class="text-xl text-white/80 max-w-3xl mx-auto">
+                Schedule your consultation with our expert medical team. Quick, easy, and secure online booking available 24/7.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Booking Form -->
+            <div data-aos="fade-right">
+                <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+                    <h3 class="text-2xl font-bold mb-6">Quick Appointment Request</h3>
+
+                    <!-- Success/Error Messages -->
+                    <?php if (isset($_SESSION['appointment_success'])): ?>
+                        <div class="mb-6 bg-green-500/20 border border-green-400/30 text-white px-4 py-3 rounded-xl backdrop-blur-sm">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                <?php echo htmlspecialchars($_SESSION['appointment_success']); ?>
+                            </div>
+                        </div>
+                        <?php unset($_SESSION['appointment_success']); ?>
+                    <?php endif; ?>
+
+                    <?php if (isset($_SESSION['appointment_errors'])): ?>
+                        <div class="mb-6 bg-red-500/20 border border-red-400/30 text-white px-4 py-3 rounded-xl backdrop-blur-sm">
+                            <div class="flex items-start">
+                                <i class="fas fa-exclamation-triangle mr-2 mt-1"></i>
+                                <div>
+                                    <?php foreach ($_SESSION['appointment_errors'] as $error): ?>
+                                        <p><?php echo htmlspecialchars($error); ?></p>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        </div>
+                        <?php unset($_SESSION['appointment_errors']); ?>
+                    <?php endif; ?>
+                    <form action="../auth/process-appointment.php" method="POST" class="space-y-4" id="appointmentForm">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" name="first_name" placeholder="First Name" required
+                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30">
+                            <input type="text" name="last_name" placeholder="Last Name" required
+                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" name="middle_name" placeholder="Middle Name (Optional)"
+                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30">
+                            <input type="date" name="date_of_birth" placeholder="Date of Birth" required
+                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-white/30">
+                        </div>
+                        <input type="email" name="email" placeholder="Email Address" required
+                               class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="tel" name="phone" placeholder="Phone Number" required
+                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30">
+                            <select name="gender" required class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-white/30">
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <input type="tel" name="emergency_contact" placeholder="Emergency Contact Number"
+                               class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30">
+                        <input type="text" name="address" placeholder="Full Address" required
+                               class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30">
+                        <select name="department" required class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-white/30">
+                            <option value="">Select Department</option>
+                            <option value="cardiology">Cardiology</option>
+                            <option value="neurology">Neurology</option>
+                            <option value="maternity">Maternity</option>
+                            <option value="emergency">Emergency</option>
+                            <option value="general">General Medicine</option>
+                            <option value="pediatrics">Pediatrics</option>
+                            <option value="orthopedics">Orthopedics</option>
+                            <option value="dermatology">Dermatology</option>
+                        </select>
+                        <input type="date" name="preferred_date" placeholder="Preferred Appointment Date" required
+                               class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-white/30">
+                        <input type="password" name="password" placeholder="Create Password for Patient Portal" required
+                               class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30">
+                        <textarea name="notes" placeholder="Additional Notes (Optional)" rows="3"
+                                  class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30 resize-none"></textarea>
+                        <button type="submit" class="w-full bg-white text-yuki-600 hover:bg-gray-100 px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 transform shadow-lg">
+                            <i class="fas fa-calendar-check mr-2"></i> Request Appointment
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Booking Benefits -->
+            <div data-aos="fade-left">
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="bg-white/20 rounded-full p-3 mr-4 flex-shrink-0">
+                            <i class="fas fa-clock text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Quick & Easy Booking</h4>
+                            <p class="text-white/80">Schedule your appointment in just a few clicks. Our online system is available 24/7 for your convenience.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="bg-white/20 rounded-full p-3 mr-4 flex-shrink-0">
+                            <i class="fas fa-user-md text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Expert Specialists</h4>
+                            <p class="text-white/80">Connect with board-certified specialists across all medical disciplines for comprehensive care.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="bg-white/20 rounded-full p-3 mr-4 flex-shrink-0">
+                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Secure & Private</h4>
+                            <p class="text-white/80">Your personal information is protected with industry-leading security and HIPAA compliance.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/10 rounded-2xl p-6 mt-8">
+                        <h4 class="text-lg font-bold mb-3">Already a Patient?</h4>
+                        <p class="text-white/80 mb-4">Access your patient portal for faster booking and medical records.</p>
+                        <a href="/hospital/auth/login.php?type=patient" class="bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-xl font-medium transition-all duration-200 inline-block">
+                            <i class="fas fa-sign-in-alt mr-2"></i> Patient Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Patient Testimonials Section -->
+<section class="py-20 bg-gradient-to-br from-yuki-50 via-white to-carte-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 relative overflow-hidden transition-colors duration-300">
+    <!-- Background Elements -->
+    <div class="absolute top-20 left-20 w-40 h-40 bg-gradient-to-r from-yuki-200/30 to-carte-200/30 rounded-full blur-xl animate-float"></div>
+    <div class="absolute bottom-20 right-20 w-32 h-32 bg-gradient-to-r from-medical-200/30 to-yuki-200/30 rounded-full blur-xl animate-float" style="animation-delay: 2s;"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="inline-block px-4 py-2 bg-gradient-to-r from-yuki-100 to-carte-100 dark:from-yuki-900/30 dark:to-carte-900/30 text-yuki-700 dark:text-yuki-300 rounded-full text-sm font-medium mb-4">
+                💬 Patient Stories
+            </span>
+            <h2 class="text-4xl md:text-5xl font-bold font-display text-gray-900 dark:text-white mb-6">
+                What Our <span class="bg-gradient-to-r from-yuki-600 to-carte-600 bg-clip-text text-transparent">Patients</span> Say
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                Real stories from real patients who have experienced exceptional care at Yuki Care Healthcare
+            </p>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <!-- Testimonial 1 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-yuki-400 to-carte-400 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700">
+                        <!-- Quote Icon -->
+                        <div class="absolute top-6 right-6">
+                            <i class="fas fa-quote-right text-yuki-200 dark:text-yuki-800 text-3xl"></i>
+                        </div>
+
+                        <!-- Star Rating -->
+                        <div class="flex mb-4">
+                            <i class="fas fa-star text-yellow-400 text-lg"></i>
+                            <i class="fas fa-star text-yellow-400 text-lg"></i>
+                            <i class="fas fa-star text-yellow-400 text-lg"></i>
+                            <i class="fas fa-star text-yellow-400 text-lg"></i>
+                            <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        </div>
+
+                        <!-- Testimonial Text -->
+                        <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed italic">
+                            "The emergency team at Yuki Carte saved my life. Their quick response and professional care during my heart attack was exceptional. I'm forever grateful to Dr. Chen and her team."
+                        </p>
+
+                        <!-- Patient Info -->
+                        <div class="flex items-center">
+                            <div class="bg-gradient-to-r from-yuki-400 to-carte-400 rounded-full w-12 h-12 mr-4 overflow-hidden">
+                                <img src="../images/pat1.jpg" alt="Robert Johnson - Cardiac Patient" class="w-full h-full object-cover object-center">
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 dark:text-white">Robert Johnson</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Cardiac Patient</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-medical-400 to-yuki-400 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700">
+                        <!-- Quote Icon -->
+                        <div class="absolute top-6 right-6">
+                            <i class="fas fa-quote-right text-medical-200 dark:text-medical-800 text-3xl"></i>
+                        </div>
+
+                        <!-- Star Rating -->
+                        <div class="flex mb-4">
+                            <i class="fas fa-star text-yellow-400 text-lg"></i>
+                            <i class="fas fa-star text-yellow-400 text-lg"></i>
+                            <i class="fas fa-star text-yellow-400 text-lg"></i>
+                            <i class="fas fa-star text-yellow-400 text-lg"></i>
+                            <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        </div>
+
+                        <!-- Testimonial Text -->
+                        <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed italic">
+                            "Dr. Watson and the maternity team made my pregnancy journey beautiful. From prenatal care to delivery, every step was handled with such care and professionalism."
+                        </p>
+
+                        <!-- Patient Info -->
+                        <div class="flex items-center">
+                            <div class="bg-gradient-to-r from-medical-400 to-yuki-400 rounded-full w-12 h-12 mr-4 overflow-hidden">
+                                <img src="../images/pat2.jfif" alt="Maria Rodriguez - New Mother" class="w-full h-full object-cover object-center">
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 dark:text-white">Maria Rodriguez</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">New Mother</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="300">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-carte-400 to-medical-400 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700">
+                        <!-- Quote Icon -->
+                        <div class="absolute top-6 right-6">
+                            <i class="fas fa-quote-right text-carte-200 dark:text-carte-800 text-3xl"></i>
+                        </div>
+
+                        <!-- Star Rating -->
+                        <div class="flex mb-4">
+                            <i class="fas fa-star text-yellow-400 text-lg"></i>
+                            <i class="fas fa-star text-yellow-400 text-lg"></i>
+                            <i class="fas fa-star text-yellow-400 text-lg"></i>
+                            <i class="fas fa-star text-yellow-400 text-lg"></i>
+                            <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        </div>
+
+                        <!-- Testimonial Text -->
+                        <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed italic">
+                            "The neurology department helped me recover from my stroke. Dr. Rodriguez's expertise and the rehabilitation team's dedication gave me my life back."
+                        </p>
+
+                        <!-- Patient Info -->
+                        <div class="flex items-center">
+                            <div class="bg-gradient-to-r from-carte-400 to-medical-400 rounded-full w-12 h-12 mr-4 overflow-hidden">
+                                <img src="../images/pat3.webp" alt="David Thompson - Stroke Recovery Patient" class="w-full h-full object-cover object-center">
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 dark:text-white">David Thompson</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Stroke Recovery Patient</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overall Rating CTA -->
+        <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 rounded-3xl p-8 inline-block">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="flex mr-4">
+                        <i class="fas fa-star text-yellow-400 text-2xl"></i>
+                        <i class="fas fa-star text-yellow-400 text-2xl"></i>
+                        <i class="fas fa-star text-yellow-400 text-2xl"></i>
+                        <i class="fas fa-star text-yellow-400 text-2xl"></i>
+                        <i class="fas fa-star text-yellow-400 text-2xl"></i>
+                    </div>
+                    <span class="text-3xl font-bold text-gray-900 dark:text-white">4.9/5</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                    Trusted by <span class="bg-gradient-to-r from-yuki-600 to-carte-600 bg-clip-text text-transparent">10,000+</span> Patients
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl">
+                    Join thousands of satisfied patients who have experienced exceptional healthcare at Yuki Care. Your health and satisfaction are our top priorities.
+                </p>
+                <button class="bg-gradient-to-r from-primary-500 to-primary-400 text-white hover:from-primary-600 hover:to-primary-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 transform">
+                    <i class="fas fa-calendar-check mr-2"></i> Share Your Experience
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Community Outreach & Charity Section -->
+<section class="py-20 bg-gradient-to-br from-medical-50 via-white to-yuki-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden transition-colors duration-300">
+    <!-- Background Elements -->
+    <div class="absolute top-20 right-20 w-40 h-40 bg-gradient-to-r from-medical-200/30 to-carte-200/30 rounded-full blur-xl animate-float"></div>
+    <div class="absolute bottom-20 left-20 w-32 h-32 bg-gradient-to-r from-yuki-200/30 to-medical-200/30 rounded-full blur-xl animate-float" style="animation-delay: 3s;"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="inline-block px-4 py-2 bg-gradient-to-r from-medical-100 to-carte-100 dark:from-medical-900/30 dark:to-carte-900/30 text-medical-700 dark:text-medical-300 rounded-full text-sm font-medium mb-4">
+                🤝 Community Impact
+            </span>
+            <h2 class="text-4xl md:text-5xl font-bold font-display text-gray-900 dark:text-white mb-6">
+                Giving Back to Our <span class="bg-gradient-to-r from-medical-600 to-yuki-600 bg-clip-text text-transparent">Community</span>
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                Beyond healthcare, we're committed to making a positive impact through charitable initiatives, medical missions, and community outreach programs
+            </p>
+        </div>
+
+        <!-- Charity Initiatives Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <!-- Medical Missions -->
+            <div class="group" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-medical-400 to-yuki-400 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700">
+                        <!-- Charity Image -->
+                        <div class="h-48 overflow-hidden">
+                            <img src="../images/gmm.jpg" alt="Global Medical Missions - Healthcare volunteers in underserved communities" class="w-full h-full object-cover object-center">
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Global Medical Missions</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                                Our medical teams travel to underserved communities worldwide, providing free healthcare and medical training to local practitioners.
+                            </p>
+                            <div class="flex items-center text-medical-600 dark:text-medical-400 text-sm font-medium">
+                                <i class="fas fa-heart mr-2"></i>
+                                <span>15 Countries Served</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Free Health Screenings -->
+            <div class="group" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-yuki-400 to-carte-400 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700">
+                        <!-- Charity Image -->
+                        <div class="h-48 overflow-hidden">
+                            <img src="../images/chs.jpg" alt="Community Health Screenings - Free health checkups for local residents" class="w-full h-full object-cover object-center">
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Community Health Screenings</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                                Monthly free health screenings in local communities, focusing on early detection and preventive care for all ages.
+                            </p>
+                            <div class="flex items-center text-yuki-600 dark:text-yuki-400 text-sm font-medium">
+                                <i class="fas fa-users mr-2"></i>
+                                <span>5,000+ People Screened</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Educational Programs -->
+            <div class="group" data-aos="fade-up" data-aos-delay="300">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-carte-400 to-medical-400 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700">
+                        <!-- Charity Image -->
+                        <div class="h-48 overflow-hidden">
+                            <img src="../images/hep.jfif" alt="Health Education Programs - Teaching wellness in schools and community centers" class="w-full h-full object-cover object-center">
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Health Education Programs</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                                Comprehensive health education workshops in schools and community centers, promoting wellness and disease prevention.
+                            </p>
+                            <div class="flex items-center text-carte-600 dark:text-carte-400 text-sm font-medium">
+                                <i class="fas fa-school mr-2"></i>
+                                <span>50+ Schools Reached</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emergency Relief -->
+            <div class="group" data-aos="fade-up" data-aos-delay="400">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-red-400 to-orange-400 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700">
+                        <!-- Charity Image -->
+                        <div class="h-48 overflow-hidden">
+                            <img src="../images/drs.jpg" alt="Disaster Relief Support - Emergency medical response teams helping disaster victims" class="w-full h-full object-cover object-center">
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Disaster Relief Support</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                                Rapid response medical teams deployed during natural disasters, providing emergency care and medical supplies to affected areas.
+                            </p>
+                            <div class="flex items-center text-red-600 dark:text-red-400 text-sm font-medium">
+                                <i class="fas fa-ambulance mr-2"></i>
+                                <span>24/7 Emergency Response</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Senior Care -->
+            <div class="group" data-aos="fade-up" data-aos-delay="500">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700">
+                        <!-- Charity Image -->
+                        <div class="h-48 overflow-hidden">
+                            <img src="../images/sco.jpg" alt="Senior Care Outreach - Healthcare professionals providing home care for elderly patients" class="w-full h-full object-cover object-center">
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Senior Care Outreach</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                                Dedicated programs for elderly care including home visits, medication management, and social support services.
+                            </p>
+                            <div class="flex items-center text-purple-600 dark:text-purple-400 text-sm font-medium">
+                                <i class="fas fa-home mr-2"></i>
+                                <span>1,000+ Seniors Supported</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mental Health Support -->
+            <div class="group" data-aos="fade-up" data-aos-delay="600">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                    <div class="relative bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700">
+                        <!-- Charity Image -->
+                        <div class="h-48 overflow-hidden">
+                            <img src="../images/mh.jfif" alt="Mental Health Awareness - Support groups and counseling sessions for mental wellness" class="w-full h-full object-cover object-center">
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Mental Health Awareness</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                                Free mental health counseling, support groups, and awareness campaigns to break stigma and promote mental wellness.
+                            </p>
+                            <div class="flex items-center text-blue-600 dark:text-blue-400 text-sm font-medium">
+                                <i class="fas fa-comments mr-2"></i>
+                                <span>Free Counseling Available</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Get Involved CTA -->
+        <div class="text-center" data-aos="fade-up" data-aos-delay="700">
+            <div class="bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 rounded-3xl p-8 inline-block">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                    Join Our <span class="bg-gradient-to-r from-medical-600 to-yuki-600 bg-clip-text text-transparent">Mission</span>
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl">
+                    Be part of our community impact initiatives. Whether through volunteering, donations, or spreading awareness, every contribution makes a difference.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-gradient-to-r from-primary-500 to-primary-400 text-white hover:from-primary-600 hover:to-primary-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 transform">
+                        <i class="fas fa-hands-helping mr-2"></i> Volunteer With Us
+                    </button>
+                    <button class="bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-2 border-gray-200 dark:border-gray-600 hover:border-medical-300 dark:hover:border-medical-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 transform">
+                        <i class="fas fa-donate mr-2"></i> Make a Donation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-20 bg-gradient-to-br from-gray-50 via-white to-yuki-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden transition-colors duration-300">
+    <!-- Background Elements -->
+    <div class="absolute top-20 left-20 w-40 h-40 bg-gradient-to-r from-yuki-200/20 to-carte-200/20 rounded-full blur-xl animate-float"></div>
+    <div class="absolute bottom-20 right-20 w-32 h-32 bg-gradient-to-r from-medical-200/20 to-yuki-200/20 rounded-full blur-xl animate-float" style="animation-delay: 4s;"></div>
+
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="inline-block px-4 py-2 bg-gradient-to-r from-yuki-100 to-carte-100 dark:from-yuki-900/30 dark:to-carte-900/30 text-yuki-700 dark:text-yuki-300 rounded-full text-sm font-medium mb-4">
+                ❓ Frequently Asked Questions
+            </span>
+            <h2 class="text-4xl md:text-5xl font-bold font-display text-gray-900 dark:text-white mb-6">
+                Common Questions About Our <span class="bg-gradient-to-r from-yuki-600 to-carte-600 bg-clip-text text-transparent">Healthcare Services</span>
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                Find quick answers to the most common questions about our services, appointments, policies, and patient care
+            </p>
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="space-y-4 mb-12">
+            <!-- FAQ Item 1 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                    <button class="w-full px-6 py-6 text-left focus:outline-none focus:ring-2 focus:ring-yuki-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 rounded-2xl"
+                            onclick="toggleFAQ(this)"
+                            aria-expanded="false"
+                            aria-controls="faq-1">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white pr-4">
+                                How do I schedule an appointment with a specialist?
+                            </h3>
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-chevron-down text-yuki-600 dark:text-yuki-400 transition-transform duration-300 transform"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <div id="faq-1" class="faq-content hidden px-6 pb-6">
+                        <div class="pt-4 border-t border-gray-100 dark:border-gray-700">
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                You can schedule an appointment through our online patient portal, by calling our main number at +234 7062 403852, or by visiting our reception desk. For specialist appointments, you may need a referral from your primary care physician. Our scheduling team will help coordinate with the appropriate department and find the earliest available appointment that fits your schedule.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="150">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                    <button class="w-full px-6 py-6 text-left focus:outline-none focus:ring-2 focus:ring-yuki-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 rounded-2xl"
+                            onclick="toggleFAQ(this)"
+                            aria-expanded="false"
+                            aria-controls="faq-2">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white pr-4">
+                                What insurance plans do you accept?
+                            </h3>
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-chevron-down text-medical-600 dark:text-medical-400 transition-transform duration-300 transform"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <div id="faq-2" class="faq-content hidden px-6 pb-6">
+                        <div class="pt-4 border-t border-gray-100 dark:border-gray-700">
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                We accept most major insurance plans including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, Medicare, and Medicaid. We also offer self-pay options and payment plans for uninsured patients. Please contact our billing department at (555) 123-4568 to verify your specific coverage or discuss payment options before your visit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                    <button class="w-full px-6 py-6 text-left focus:outline-none focus:ring-2 focus:ring-yuki-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 rounded-2xl"
+                            onclick="toggleFAQ(this)"
+                            aria-expanded="false"
+                            aria-controls="faq-3">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white pr-4">
+                                What should I do in case of a medical emergency?
+                            </h3>
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-chevron-down text-carte-600 dark:text-carte-400 transition-transform duration-300 transform"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <div id="faq-3" class="faq-content hidden px-6 pb-6">
+                        <div class="pt-4 border-t border-gray-100 dark:border-gray-700">
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                For life-threatening emergencies, call 911 immediately. Our Emergency Department is open 24/7 and equipped to handle all types of medical emergencies. For urgent but non-life-threatening conditions, you can visit our Urgent Care center or call our nurse hotline at (555) 123-4569 for guidance on whether you need immediate care.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="250">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                    <button class="w-full px-6 py-6 text-left focus:outline-none focus:ring-2 focus:ring-yuki-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 rounded-2xl"
+                            onclick="toggleFAQ(this)"
+                            aria-expanded="false"
+                            aria-controls="faq-4">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white pr-4">
+                                How do I access my medical records and test results?
+                            </h3>
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-chevron-down text-yuki-600 dark:text-yuki-400 transition-transform duration-300 transform"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <div id="faq-4" class="faq-content hidden px-6 pb-6">
+                        <div class="pt-4 border-t border-gray-100 dark:border-gray-700">
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                You can access your medical records, test results, and appointment history through our secure patient portal. Simply log in with your credentials at our website or mobile app. If you need help setting up your account, visit our registration desk or call (555) 123-4567. Test results are typically available within 24-48 hours of completion.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                    <button class="w-full px-6 py-6 text-left focus:outline-none focus:ring-2 focus:ring-yuki-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 rounded-2xl"
+                            onclick="toggleFAQ(this)"
+                            aria-expanded="false"
+                            aria-controls="faq-5">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white pr-4">
+                                What are your visiting hours and policies?
+                            </h3>
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-chevron-down text-medical-600 dark:text-medical-400 transition-transform duration-300 transform"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <div id="faq-5" class="faq-content hidden px-6 pb-6">
+                        <div class="pt-4 border-t border-gray-100 dark:border-gray-700">
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                General visiting hours are 8:00 AM to 8:00 PM daily. ICU visiting hours are 10:00 AM to 2:00 PM and 4:00 PM to 8:00 PM. We allow up to 2 visitors per patient at a time. All visitors must check in at the main reception and may be required to show ID. Special accommodations can be made for family members of critically ill patients.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="350">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                    <button class="w-full px-6 py-6 text-left focus:outline-none focus:ring-2 focus:ring-yuki-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 rounded-2xl"
+                            onclick="toggleFAQ(this)"
+                            aria-expanded="false"
+                            aria-controls="faq-6">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white pr-4">
+                                Do you offer specialized services like cardiology and neurology?
+                            </h3>
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-chevron-down text-carte-600 dark:text-carte-400 transition-transform duration-300 transform"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <div id="faq-6" class="faq-content hidden px-6 pb-6">
+                        <div class="pt-4 border-t border-gray-100 dark:border-gray-700">
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Yes, we offer comprehensive specialized services including Cardiology, Neurology, Orthopedics, Oncology, Pediatrics, Maternity Care, and more. Our specialists are board-certified and use the latest medical technology. We also have advanced diagnostic imaging, laboratory services, and surgical facilities on-site for complete patient care.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 7 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                    <button class="w-full px-6 py-6 text-left focus:outline-none focus:ring-2 focus:ring-yuki-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 rounded-2xl"
+                            onclick="toggleFAQ(this)"
+                            aria-expanded="false"
+                            aria-controls="faq-7">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white pr-4">
+                                How can I prepare for my upcoming surgery or procedure?
+                            </h3>
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-chevron-down text-yuki-600 dark:text-yuki-400 transition-transform duration-300 transform"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <div id="faq-7" class="faq-content hidden px-6 pb-6">
+                        <div class="pt-4 border-t border-gray-100 dark:border-gray-700">
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Pre-operative instructions will be provided by your surgeon and our pre-surgical team. Generally, this includes fasting guidelines, medication adjustments, and what to bring on the day of surgery. You'll receive detailed written instructions and have a pre-operative consultation to address any questions. Our patient coordinators will guide you through the entire process.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 8 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="450">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                    <button class="w-full px-6 py-6 text-left focus:outline-none focus:ring-2 focus:ring-yuki-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 rounded-2xl"
+                            onclick="toggleFAQ(this)"
+                            aria-expanded="false"
+                            aria-controls="faq-8">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white pr-4">
+                                Where is the hospital located and what parking options are available?
+                            </h3>
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-chevron-down text-medical-600 dark:text-medical-400 transition-transform duration-300 transform"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <div id="faq-8" class="faq-content hidden px-6 pb-6">
+                        <div class="pt-4 border-t border-gray-100 dark:border-gray-700">
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                We're located at 123 Healthcare Avenue, easily accessible from major highways. We offer free parking in our main garage with over 500 spaces, plus valet parking services during peak hours. The hospital is also accessible by public transportation with bus stops directly in front of the main entrance. Detailed directions and maps are available on our website.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 9 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="500">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                    <button class="w-full px-6 py-6 text-left focus:outline-none focus:ring-2 focus:ring-yuki-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 rounded-2xl"
+                            onclick="toggleFAQ(this)"
+                            aria-expanded="false"
+                            aria-controls="faq-9">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white pr-4">
+                                Can I get a second opinion or transfer my care to your facility?
+                            </h3>
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-chevron-down text-carte-600 dark:text-carte-400 transition-transform duration-300 transform"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <div id="faq-9" class="faq-content hidden px-6 pb-6">
+                        <div class="pt-4 border-t border-gray-100 dark:border-gray-700">
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Absolutely! We welcome patients seeking second opinions and care transfers. Our specialists can review your medical records and provide expert consultation. To transfer care, contact our patient services team who will help coordinate with your previous healthcare providers to obtain your medical records and ensure a smooth transition of care.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 10 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="550">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                    <button class="w-full px-6 py-6 text-left focus:outline-none focus:ring-2 focus:ring-yuki-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 rounded-2xl"
+                            onclick="toggleFAQ(this)"
+                            aria-expanded="false"
+                            aria-controls="faq-10">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white pr-4">
+                                Do you offer telemedicine or virtual consultations?
+                            </h3>
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-chevron-down text-yuki-600 dark:text-yuki-400 transition-transform duration-300 transform"></i>
+                            </div>
+                        </div>
+                    </button>
+                    <div id="faq-10" class="faq-content hidden px-6 pb-6">
+                        <div class="pt-4 border-t border-gray-100 dark:border-gray-700">
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Yes, we offer telemedicine services for follow-up appointments, routine consultations, and certain specialist visits. Virtual consultations are available through our secure patient portal and mobile app. This service is perfect for medication reviews, post-operative check-ins, and consultations that don't require physical examination. Contact us to see if your appointment qualifies for virtual care.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ CTA Section -->
+        <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+            <div class="bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 rounded-3xl p-8 inline-block">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                    Still Have <span class="bg-gradient-to-r from-yuki-600 to-carte-600 bg-clip-text text-transparent">Questions?</span>
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl">
+                    Our patient care team is here to help. Contact us for personalized assistance with any questions about our services, appointments, or patient care.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="../contact/index.php" class="bg-gradient-to-r from-primary-500 to-primary-400 text-white hover:from-primary-600 hover:to-primary-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 transform">
+                        <i class="fas fa-phone mr-2"></i> Contact Us
+                    </a>
+                    <a href="tel:+2347062403852" class="bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-2 border-gray-200 dark:border-gray-600 hover:border-yuki-300 dark:hover:border-yuki-500 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 transform">
+                        <i class="fas fa-phone-alt mr-2"></i> Call +234 7062 403852
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ JavaScript -->
+<script>
+function toggleFAQ(button) {
+    const content = button.nextElementSibling;
+    const icon = button.querySelector('i');
+    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+    // Close all other FAQ items
+    document.querySelectorAll('.faq-content').forEach(item => {
+        if (item !== content) {
+            item.classList.add('hidden');
+            const otherButton = item.previousElementSibling;
+            const otherIcon = otherButton.querySelector('i');
+            otherButton.setAttribute('aria-expanded', 'false');
+            otherIcon.classList.remove('rotate-180');
+        }
+    });
+
+    // Toggle current FAQ item
+    if (isExpanded) {
+        content.classList.add('hidden');
+        button.setAttribute('aria-expanded', 'false');
+        icon.classList.remove('rotate-180');
+    } else {
+        content.classList.remove('hidden');
+        button.setAttribute('aria-expanded', 'true');
+        icon.classList.add('rotate-180');
+    }
+}
+
+// Keyboard navigation support
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+        if (e.target.closest('button[onclick*="toggleFAQ"]')) {
+            e.preventDefault();
+            e.target.click();
+        }
+    }
+});
+</script>
+
+<?php include '../utility/footer.php'; ?>
