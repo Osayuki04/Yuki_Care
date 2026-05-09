@@ -28,6 +28,9 @@
     <!-- Font Awesome - provides all the icons used throughout the site (fas fa-heart, fas fa-user, etc.) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Swiper - slider library for carousels -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <!-- ANIMATION LIBRARIES -->
     <!-- AOS (Animate On Scroll) - creates scroll-triggered animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -91,7 +94,7 @@
             transform: translateX(-50%);
             width: 80%;
             height: 2px;
-            background: linear-gradient(90deg, #006f6a, #e7a82a);
+            background: linear-gradient(90deg, #006f6a, #006f6a);
             border-radius: 1px;
         }
 
@@ -104,7 +107,7 @@
             transform: translateX(-50%);
             width: 0%;
             height: 2px;
-            background: linear-gradient(90deg, #006f6a, #e7a82a);
+            background: linear-gradient(90deg, #006f6a, #006f6a);
             border-radius: 1px;
             transition: width 0.3s ease;
         }
@@ -119,7 +122,7 @@
     <!-- Supports dark mode with automatic color transitions -->
      <!-- TOP CONTACT BAR -->
      <nav class="hidden md:block bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700 transition-colors duration-300 py-0">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class=" mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-center items-center space-x-12 ">
                 <!-- Logo/Brand Image - UBTH.org Style (Large & Professional) -->
                 <div class="flex items-center">
@@ -175,9 +178,9 @@
             </div>
         </div>
      </nav>
-    <nav class="bg-primary-300 dark:bg-gray-700 shadow-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-40 transition-colors duration-300 py-2">
+    <nav class="bg-gradient-to-r from-yuki-600 to-yuki-500 dark:bg-gray-700 shadow-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-40 transition-colors duration-300 py-2">
         <!-- Container with responsive padding -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class=" mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
 
                 <!-- LOGO AND BRAND SECTION -->
@@ -187,7 +190,7 @@
                         <!-- Brand text - Responsive sizing -->
                         <div>
                             <!-- Main brand name with single color - Responsive sizing -->
-                            <h1 class="font-bold font-display text-gray-900 text-[15px] sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-tight">
+                            <h1 class="font-bold font-display text-yellow-300 text-[15px] sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-tight">
                                 Yuki Care
                             </h1>
                                
@@ -199,41 +202,42 @@
                 <!-- NAVIGATION LINKS SECTION -->
                 <!-- Hidden on mobile (md:block), shown on desktop -->
                 <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
+                    <div class=" flex items-baseline space-x-4">
 
                         <!-- NAVIGATION FOR NON-LOGGED IN USERS -->
                         <?php if (!isset($_SESSION['user_id'])): ?>
                             <!-- Home link -->
-                            <a href="../home/" class="nav-link-hover text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:scale-105 relative" data-page="index">
+                            <a href="../home/" class="nav-link-hover text-gray-700 dark:text-gray-300  dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:scale-105 relative" data-page="home">
                                 <i class="fas fa-house-medical mr-1"></i> Home
                             </a>
 
                             <!-- Services link -->
-                            <a href="../services/" class="nav-link-hover text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:scale-105 relative" data-page="services">
+                            <a href="../services/" class="nav-link-hover text-gray-700 dark:text-gray-300  dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:scale-105 relative" data-page="services">
                                 <i class="fas fa-stethoscope mr-1"></i> Services
                             </a>
 
                             <!-- About link -->
-                            <a href="../about/" class="nav-link-hover text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:scale-105 relative" data-page="about">
+                            <a href="../about/" class="nav-link-hover text-gray-700 dark:text-gray-300 dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:scale-105 relative" data-page="about">
                                 <i class="fas fa-users mr-1"></i> About
                             </a>
 
                             <!-- Contact Us link -->
-                            <a href="../contact/" class="nav-link-hover text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:scale-105 relative" data-page="contact">
+                            <a href="../contact/" class="nav-link-hover text-gray-700 dark:text-gray-300  dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:scale-105 relative" data-page="contact">
                                 <i class="fas fa-phone mr-1"></i> Contact Us
                             </a>
 
                             <!-- Dark Mode Toggle Button -->
                             <!-- Shows moon icon in light mode, sun icon in dark mode -->
                             <button id="darkModeToggle" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:scale-105">
-                                <i class="fas fa-moon" id="moonIcon"></i>    <!-- Shown in light mode -->
-                                <i class="fas fa-sun hidden dark:inline-block" id="sunIcon"></i> <!-- Shown in dark mode -->
+                                <i class="fas fa-moon dark:hidden" id="moonIcon"></i>    <!-- Shown in light mode -->
+                                <!-- <i class="fas fa-sun hidden dark:inline-block" id="sunIcon"></i>  -->
+                                <!-- Shown in dark mode -->
                             </button>
 
                             <!-- Login buttons -->
                             <div class="flex space-x-2">
-                                <a href="../auth/admin-login.php" class="bg-secondary-500 text-white hover:bg-secondary-600 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl">
-                                    <i class="fas fa-user-shield mr-1"></i> Admin Login
+                                <a href="../auth/admin-login.php" class="bg-secondary-500 text-white hover:bg-secondary-600 px-6 py-4 rounded-md text-base font-semibold transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl">
+                                    Admin Login
                                 </a>
                             </div>
                         <!-- NAVIGATION FOR LOGGED IN USERS -->
@@ -395,8 +399,29 @@
             // Check for saved theme preference in browser storage
             // If no preference saved, use system preference (light/dark mode)
             const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                html.classList.add('dark');  // Enable dark mode
+            if (savedTheme === 'dark') {
+                html.classList.add('dark');  // Enable dark mode only when explicitly chosen
+            } else if (savedTheme === 'light') {
+                html.classList.remove('dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+                html.classList.remove('dark');
+            }
+
+            const moonIcon = document.getElementById('moonIcon');
+            const sunIcon = document.getElementById('sunIcon');
+            const moonIcon2 = document.getElementById('moonIcon2');
+            const sunIcon2 = document.getElementById('sunIcon2');
+
+            function updateThemeIcons() {
+                const isDark = html.classList.contains('dark');
+                const showMoon = !isDark;
+                const showSun = isDark;
+
+                if (moonIcon) moonIcon.classList.toggle('hidden', !showMoon);
+                if (sunIcon) sunIcon.classList.toggle('hidden', !showSun);
+                if (moonIcon2) moonIcon2.classList.toggle('hidden', !showMoon);
+                if (sunIcon2) sunIcon2.classList.toggle('hidden', !showSun);
             }
 
             // Function to toggle dark mode
@@ -409,6 +434,8 @@
                 } else {
                     localStorage.setItem('theme', 'light');  // Save light preference
                 }
+
+                updateThemeIcons();
             }
 
             // Add click event listeners to both dark mode toggle buttons
@@ -418,6 +445,8 @@
             if (darkModeToggle2) {
                 darkModeToggle2.addEventListener('click', toggleDarkMode);
             }
+
+            updateThemeIcons();
 
             // ===== LOADING SCREEN FUNCTIONALITY =====
             // Hide the loading screen after 1.5 seconds
