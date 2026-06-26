@@ -1,0 +1,43 @@
+# ============================================================================
+#  Yibera — production Apache rules
+# ============================================================================
+
+Options -Indexes
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # ---- Force HTTPS (skips localhost so local XAMPP dev still works) -------
+    RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteCond %{HTTP_HOST} !^localhost [NC]
+    RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # ---- Block direct web access to server-side folders --------------------
+    # (PHP still includes these from the filesystem — only HTTP access is blocked)
+    RewriteRule ^(config|app|storage|src|scripts|node_modules)(/|$) - [F,L]
+</IfModule>
+
+# ---- Block sensitive file types wherever they live -------------------------
+<FilesMatch "\.(env|sql|log|md|cjs|lock|sh|ini)$">
+    Require all denied
+</FilesMatch>
+
+# Allow package.json etc. to stay private but keep app JSON config readable only by PHP
+<FilesMatch "(package(-lock)?\.json|composer\.(json|lock))$">
+    Require all denied
+</FilesMatch>
+
+# ---- Hide dotfiles (.git, .htaccess, .env, …) ------------------------------
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# ---- A few sensible security headers ---------------------------------------
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

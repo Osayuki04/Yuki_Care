@@ -1,16 +1,111 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap");
 
 @config "../tailwind.config.cjs";
 @import "tailwindcss";
 @source "../**/*.{php,html,js,jsx,ts,tsx}";
 
+/* ------------------------------------------------------------------ *
+ *  Global base styles
+ * ------------------------------------------------------------------ */
 @layer base {
-  h1,
-  h2,
-  h3,
-  p,
-  h4 {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-800 antialiased;
     font-family: "Raleway", ui-sans-serif, system-ui, sans-serif;
-    
+    /* Fluid base font size: comfortable on phones, steady on desktop. */
+    font-size: clamp(15px, 0.95rem + 0.15vw, 17px);
+    line-height: 1.6;
+  }
+
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+
+  /* Headings inherit their colour so they work on both light and coloured
+     (e.g. green) backgrounds. Set an explicit text colour in the markup when
+     a specific shade is needed. */
+  h1, h2, h3, h4, h5 {
+    font-family: "Raleway", ui-sans-serif, system-ui, sans-serif;
+    @apply font-semibold tracking-tight;
+    color: inherit;
+    text-wrap: balance;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  /* Consistent, accessible focus ring across interactive elements. */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    @apply outline-none ring-2 ring-yuki-500 ring-offset-1;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
+
+/* ------------------------------------------------------------------ *
+ *  Reusable component classes (solid colours, md radius)
+ * ------------------------------------------------------------------ */
+@layer components {
+  .btn,
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md
+           text-sm font-semibold transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-offset-1;
+  }
+  .btn-primary   { @apply bg-yuki-600 text-white hover:bg-yuki-700 focus:ring-yuki-500; }
+  .btn-secondary { @apply bg-secondary-500 text-white hover:bg-secondary-600 focus:ring-secondary-500; }
+  .btn-outline   { @apply border border-gray-300 text-gray-700 hover:bg-gray-100
+                           dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700; }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-md border border-gray-200
+           dark:border-gray-700 shadow-sm;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-2.5 rounded-md border border-gray-300 bg-white text-gray-900
+           focus:ring-2 focus:ring-yuki-500 focus:border-transparent
+           dark:border-gray-600 dark:bg-gray-700 dark:text-white;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium;
+  }
+}
+
+/* Home hero: a notch cut from the image so the CTA buttons read as part of it.
+   Full-width strip on mobile; a top-left rectangle on >= sm. */
+.hero-notch {
+  clip-path: polygon(0 64px, 100% 64px, 100% 100%, 0 100%);
+}
+@media (min-width: 640px) {
+  .hero-notch {
+    clip-path: polygon(440px 0, 100% 0, 100% 100%, 0 100%, 0 76px, 440px 76px);
+  }
+}
+
+/* Dashboard liveliness ------------------------------------------------ */
+
+/* Gentle floating avatar / illustration */
+@keyframes floatSlow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+.animate-float-slow { animation: floatSlow 4s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .animate-float-slow { animation: none; } }
+
+/* Soft staggered entrance for dashboard cards */
+@keyframes revealUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.reveal-up { opacity: 0; animation: revealUp 0.5s ease-out forwards; }
+@media (prefers-reduced-motion: reduce) { .reveal-up { opacity: 1; animation: none; } }

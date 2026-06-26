@@ -24,11 +24,9 @@
     "tailwindcss": "^4.2.4"
   },
   "scripts": {
-    "build:css": "tailwindcss -c ./tailwind.config.cjs -i ./src/input.css -o ./dist/output.css",
-    "build:css:min": "tailwindcss -c ./tailwind.config.cjs -i ./src/input.css -o ./dist/output.css --minify",
-    "watch:css": "tailwindcss -c ./tailwind.config.cjs -i ./src/input.css -o ./dist/output.css --watch",
-    "build:css:node": "node scripts/build-tailwind.cjs",
-    "watch:css:node": "node scripts/build-tailwind.cjs --watch",
+    "build:css": "node scripts/build-css.cjs",
+    "build:css:min": "node scripts/build-css.cjs --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

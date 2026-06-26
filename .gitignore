@@ -1,0 +1,20 @@
+# ---- Dependencies (never deploy these; rebuild locally) --------------------
+/node_modules/
+/app/node_modules/
+
+# ---- Runtime / generated ---------------------------------------------------
+/storage/*.log
+storage/mail.log
+
+# ---- Local secrets / env ---------------------------------------------------
+.env
+.env.local
+/config/mail.local.php
+
+# ---- OS / editor junk ------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
