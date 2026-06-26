@@ -9,6 +9,13 @@ $cssVersion = is_file($cssPath) ? filemtime($cssPath) : time();
 
 <link rel="icon" type="image/png" href="<?= asset('images/yiberalogo2.png') ?>">
 
+<!-- Warm up the third-party origins early -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+
 <!-- Compiled Tailwind CSS -->
 <link href="<?= asset('dist/output.css') ?>?v=<?= $cssVersion ?>" rel="stylesheet">
 
@@ -18,9 +25,9 @@ $cssVersion = is_file($cssPath) ? filemtime($cssPath) : time();
 <!-- Swiper (carousels) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-<!-- AOS (animate on scroll) -->
+<!-- AOS (animate on scroll) — deferred so it doesn't block first render -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 
-<!-- Google Fonts -->
+<!-- Google Fonts (display=swap keeps text visible while fonts load) -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">

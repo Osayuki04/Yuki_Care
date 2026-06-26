@@ -18,27 +18,49 @@ class Database
             return self::$connection;
         }
 
-        $config = require BASE_PATH . '/config/database.php';
+        $config = self::config();
+        $port   = (int) ($config['port'] ?? 3306);
 
         mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
         try {
-            // Connect without selecting a database first so we can create it if missing.
-            $mysqli = new mysqli($config['host'], $config['username'], $config['password']);
-            $mysqli->query("CREATE DATABASE IF NOT EXISTS `" . $config['database']
-                . "` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
-            $mysqli->select_db($config['database']);
-            $mysqli->set_charset($config['charset']);
+            // Preferred path: connect straight to the existing database. This is
+            // what shared hosting needs, where the DB user usually can't CREATE.
+            $mysqli = new mysqli($config['host'], $config['username'], $config['password'], $config['database'], $port);
         } catch (mysqli_sql_exception $e) {
-            error_log('Database connection failed: ' . $e->getMessage());
-            throw new RuntimeException(
-                'Database connection failed. Please make sure MySQL (XAMPP) is running.',
-                0,
-                $e
-            );
+            // The database doesn't exist yet (typical on a fresh local box):
+            // connect without it, create it, then select it.
+            try {
+                $mysqli = new mysqli($config['host'], $config['username'], $config['password'], '', $port);
+                $mysqli->query("CREATE DATABASE IF NOT EXISTS `" . $config['database']
+                    . "` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
+                $mysqli->select_db($config['database']);
+            } catch (mysqli_sql_exception $e2) {
+                error_log('Database connection failed: ' . $e2->getMessage());
+                throw new RuntimeException(
+                    'Database connection failed. Check config/database.php (or database.local.php) and that MySQL is running.',
+                    0,
+                    $e2
+                );
+            }
         }
 
+        $mysqli->set_charset($config['charset'] ?? 'utf8mb4');
+
         return self::$connection = $mysqli;
+    }
+
+    /** Load DB settings, preferring a gitignored local override so secrets stay out of git. */
+    private static function config(): array
+    {
+        foreach (['/config/database.local.php', '/config/database.php'] as $path) {
+            if (is_file(BASE_PATH . $path)) {
+                return require BASE_PATH . $path;
+            }
+        }
+        throw new RuntimeException(
+            'Database config missing. Copy config/database.example.php to config/database.local.php and add your credentials.'
+        );
     }
 
     /**

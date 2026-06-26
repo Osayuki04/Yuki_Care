@@ -22,7 +22,7 @@
         <div class="text-center">
             <div class="mb-6 flex justify-center">
                 <div class="bg-white p-4 rounded-md shadow-lg">
-                    <img src="<?= asset('images/yiberalogo2.png') ?>" alt="Yibera Hospital Logo" class="w-28 h-28 object-contain">
+                    <img src="<?= asset('images/yiberalogo2.png') ?>" alt="Yibera Hospital Logo" width="500" height="500" class="w-28 h-28 object-contain">
                 </div>
             </div>
             <h2 class="text-2xl font-bold font-display mb-2 text-yuki-600">Yibera</h2>

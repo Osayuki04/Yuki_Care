@@ -31,7 +31,7 @@
     <div class="mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
             <a href="<?= url('home') ?>" class="flex items-center gap-2">
-                <img src="<?= asset('images/yiberalogo1.png') ?>" alt="Yibera" class="h-12 w-auto object-contain">
+                <img src="<?= asset('images/yiberalogo1.png') ?>" alt="Yibera" width="500" height="500" class="h-12 w-auto object-contain">
                 <h1 class="font-bold font-display text-white text-xl sm:text-2xl lg:text-3xl leading-tight">Yibera</h1>
             </a>
 

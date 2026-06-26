@@ -40,6 +40,7 @@
                 <div class="relative rounded-md overflow-hidden shadow-md mt-2 max-md:mt-3 h-[78vh] max-xl:h-[68vh] max-md:h-[60vh]">
                     <img src="<?= asset('images/newheroPicture.png') ?>"
                          alt="Yibera – Advanced Healthcare"
+                         width="1536" height="1024" fetchpriority="high" decoding="async"
                          class="hero-notch absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105">
 
                     <!-- CTA buttons sitting inside the notch -->
