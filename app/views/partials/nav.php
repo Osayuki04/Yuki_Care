@@ -1,26 +1,30 @@
 <?php /** Public site navigation (top contact bar + main nav). */ ?>
-<!-- TOP INFO BAR — sleek, no logo -->
+<!-- TOP INFO BAR — sleek -->
 <div class="hidden md:block bg-white border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-2 text-sm text-gray-600">
-        <div class="flex items-center gap-6">
-            <a href="tel:+4401902321000" class="flex items-center gap-2 hover:text-yuki-600 transition-colors">
-                <i class="fas fa-phone-volume text-yuki-600"></i><span class="font-medium">+44 (0)1902 321000</span>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-2.5 text-sm">
+        <div class="flex items-center gap-5 text-gray-600">
+            <a href="tel:+4401902321000" class="group inline-flex items-center gap-2 hover:text-yuki-700 transition-colors">
+                <span class="w-7 h-7 rounded-full bg-yuki-50 text-yuki-600 flex items-center justify-center group-hover:bg-yuki-600 group-hover:text-white transition-colors"><i class="fas fa-phone-volume text-xs"></i></span>
+                <span class="font-medium">+44 (0)1902 321000</span>
             </a>
-            <a href="mailto:consultation@yibera.com" class="hidden lg:flex items-center gap-2 hover:text-yuki-600 transition-colors">
-                <i class="fas fa-envelope text-yuki-600"></i><span>consultation@yibera.com</span>
+            <a href="mailto:consultation@yibera.com" class="hidden lg:inline-flex items-center gap-2 hover:text-yuki-700 transition-colors group">
+                <span class="w-7 h-7 rounded-full bg-yuki-50 text-yuki-600 flex items-center justify-center group-hover:bg-yuki-600 group-hover:text-white transition-colors"><i class="fas fa-envelope text-xs"></i></span>
+                <span>consultation@yibera.com</span>
             </a>
-            <span class="hidden xl:flex items-center gap-2">
-                <i class="fas fa-location-dot text-yuki-600"></i><span>Wulfruna Street, Wolverhampton</span>
+            <span class="hidden xl:inline-flex items-center gap-2">
+                <span class="w-7 h-7 rounded-full bg-yuki-50 text-yuki-600 flex items-center justify-center"><i class="fas fa-location-dot text-xs"></i></span>
+                <span>Wulfruna Street, Wolverhampton</span>
             </span>
         </div>
-        <div class="flex items-center gap-5">
-            <span class="flex items-center gap-2">
-                <i class="fas fa-clock text-yuki-600"></i><span>24/7 Emergency Service</span>
+        <div class="flex items-center gap-4">
+            <span class="inline-flex items-center gap-2 bg-red-50 text-red-600 px-3 py-1 rounded-full text-xs font-semibold">
+                <span class="relative flex w-2 h-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span></span>
+                24/7 Emergency
             </span>
-            <span class="flex items-center gap-3 border-l border-gray-200 pl-5 text-gray-400">
-                <a href="#" aria-label="Facebook"  class="hover:text-yuki-600 transition-colors"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Twitter"   class="hover:text-yuki-600 transition-colors"><i class="fab fa-x-twitter"></i></a>
-                <a href="#" aria-label="Instagram" class="hover:text-yuki-600 transition-colors"><i class="fab fa-instagram"></i></a>
+            <span class="flex items-center gap-1.5 border-l border-gray-200 pl-4 text-gray-400">
+                <a href="#" aria-label="Facebook"  class="w-7 h-7 rounded-full hover:bg-yuki-50 hover:text-yuki-600 flex items-center justify-center transition-colors"><i class="fab fa-facebook-f text-xs"></i></a>
+                <a href="#" aria-label="Twitter"   class="w-7 h-7 rounded-full hover:bg-yuki-50 hover:text-yuki-600 flex items-center justify-center transition-colors"><i class="fab fa-x-twitter text-xs"></i></a>
+                <a href="#" aria-label="Instagram" class="w-7 h-7 rounded-full hover:bg-yuki-50 hover:text-yuki-600 flex items-center justify-center transition-colors"><i class="fab fa-instagram text-xs"></i></a>
             </span>
         </div>
     </div>

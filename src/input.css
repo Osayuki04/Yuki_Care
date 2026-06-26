@@ -109,3 +109,17 @@
 @keyframes revealUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 .reveal-up { opacity: 0; animation: revealUp 0.5s ease-out forwards; }
 @media (prefers-reduced-motion: reduce) { .reveal-up { opacity: 1; animation: none; } }
+
+/* Our Journey — sleek inline progress bar for the mobile swiper */
+.journey-progress.swiper-pagination-progressbar {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  border-radius: 9999px;
+  background: rgba(5, 150, 105, 0.15);
+  overflow: hidden;
+}
+.journey-progress .swiper-pagination-progressbar-fill {
+  background: #059669;
+  border-radius: 9999px;
+}

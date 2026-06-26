@@ -23,11 +23,11 @@
                     </div>
                 </div>
 
-                <!-- Mobile version heading -->
-                <div class="xl:hidden w-full text-center px-4 mt-2">
-                    <h1 class="text-2xl sm:text-3xl font-bold text-black leading-snug">
-                        Your Healthcare Hub<br class="hidden sm:block">
-                        For Quality <span class="italic text-yuki-600">Patients Care Worldwide</span>
+                <!-- Mobile version heading (always 2 lines, vertically stretched) -->
+                <div class="xl:hidden w-full text-center px-3 mt-3">
+                    <h1 class="text-xl sm:text-3xl font-bold text-black scale-y-130 tracking-tight leading-tight">
+                        <span class="block">Your Healthcare Hub</span>
+                         <span class="block italic text-yuki-600 -mt-2">For Quality Patients Care Worldwide</span>
                     </h1>
                     <p class="text-sm sm:text-base text-gray-600 mt-3 max-w-xl mx-auto">
                         Experience the future of healthcare management with AI-powered diagnostics,
@@ -37,11 +37,11 @@
 
                 <!-- Hero image (full). A notch is cut from the top-left of the image
                      with clip-path so the buttons read as part of the artwork. -->
-                <div class="relative rounded-md overflow-hidden shadow-md mt-2 max-md:mt-3 h-[78vh] max-xl:h-[68vh] max-md:h-[60vh]">
+                <div class="relative rounded-md overflow-hidden  shadow-md mt-2 max-md:mt-3 h-[78vh] max-xl:h-[68vh] max-md:h-[60vh]">
                     <img src="<?= asset('images/newheroPicture.png') ?>"
                          alt="Yibera – Advanced Healthcare"
                          width="1536" height="1024" fetchpriority="high" decoding="async"
-                         class="hero-notch absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                         class="hero-notch  absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105">
 
                     <!-- CTA buttons sitting inside the notch -->
                     <div class="absolute top-0 left-0 right-0 sm:right-auto md:ml-6 h-16 sm:h-[76px] flex items-center gap-3">
@@ -89,9 +89,9 @@
             </div>
 
             <!-- Right Column: Mission & Vision Content -->
-            <div class="space-y-8" data-aos="fade-left">
+            <div class="space-y-6 lg:space-y-8" data-aos="fade-left">
                 <!-- Mission -->
-                <div class="space-y-4">
+                <div class="space-y-4 border border-gray-200 rounded-md p-6 bg-white shadow-sm">
                     <div class="flex items-center space-x-4">
                         <div class=" p-3 rounded-md bg-yuki-500 ">
                             <i class="fas fa-bullseye text-white text-xl"></i>
@@ -107,7 +107,7 @@
                 </div>
 
                 <!-- Vision -->
-                <div class="space-y-4">
+                <div class="space-y-4 border border-gray-200 rounded-md p-6 bg-white shadow-sm">
                     <div class="flex items-center space-x-4">
                         <div class="bg-yuki-500  p-3 rounded-md">
                             <i class="fas fa-eye text-white text-xl"></i>
@@ -220,13 +220,50 @@
 
  <!-- Our Journey - Redesigned 2-Column Layout -->
 <section id="about" class="py-20 bg-white  relative overflow-hidden transition-colors duration-300 mt-12">
- <div class="bg-gray-100    rounded-md p-8 md:p-12" data-aos="fade-up">
+ <div class="rounded-md p-8 md:p-12" data-aos="fade-up">
     <h2 class="text-4xl md:text-5xl flex justify-center font-semibold font-display text-gray-900  mb-6">
                 Our <span class="text-yuki-600 font-semibold italic">Journey</span>
             </h2>
 
-    <!-- 2-Column Layout -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <?php
+    $journey = [
+        ['year' => '2020', 'img' => '2021.webp', 'title' => 'Foundation', 'desc' => 'Yibera was established with a vision to transform healthcare'],
+        ['year' => '2021', 'img' => '2021.jpg',  'title' => 'Expansion',  'desc' => 'Opened specialized departments and advanced medical facilities'],
+        ['year' => '2022', 'img' => '2022.png',  'title' => 'Innovation', 'desc' => 'Integrated AI-powered diagnostics and telemedicine services'],
+        ['year' => '2024', 'img' => '2024.webp', 'title' => 'Excellence', 'desc' => 'Recognized as a leading healthcare institution with 50K+ patients served'],
+    ];
+    ?>
+
+    <!-- Mobile: one year per slide (auto-scroll, top progress bar, no arrows) -->
+    <div class="lg:hidden">
+        <div class="swiper journey-swiper relative rounded-md overflow-hidden shadow-md border border-gray-100">
+            <!-- green progress bar attached to the top of the image -->
+            <div class="journey-progress"></div>
+            <div class="swiper-wrapper">
+                <?php foreach ($journey as $j): ?>
+                    <div class="swiper-slide h-auto bg-white">
+                        <!-- Image (top) with year balloon absolute top-left -->
+                        <div class="relative h-80">
+                            <img src="<?= asset('images/' . $j['img']) ?>" alt="<?= e($j['title'] . ' ' . $j['year']) ?>" class="w-full h-full object-cover">
+                            <div class="absolute top-4 left-3 flex items-center gap-2">
+                                <span class="bg-yuki-600 text-white font-bold rounded-full w-14 h-14 flex items-center justify-center shadow-lg ring-2 ring-white/70"><?= $j['year'] ?></span>
+                                <span class="h-0.5 w-7 bg-white/80 rounded-full"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-white shadow"></span>
+                            </div>
+                        </div>
+                        <!-- Text (bottom) -->
+                        <div class="p-5 text-center">
+                            <h4 class="text-lg font-bold text-gray-900"><?= e($j['title']) ?></h4>
+                            <p class="text-sm text-gray-600 mt-1.5 leading-relaxed"><?= e($j['desc']) ?></p>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop: 2-Column timeline -->
+    <div class="hidden lg:grid lg:grid-cols-2 gap-12 items-center">
 
         <!-- Left Column: Image Gallery -->
         <div class="space-y-6" data-aos="fade-right">
@@ -352,78 +389,25 @@
             <p class="text-xl text-white/80">Our commitment to excellence in numbers</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div class="text-center group" data-aos="zoom-in" data-aos-delay="100">
-                <div class="relative">
-                 
-                    <div class="relative bg-transparent rounded-md p-6 group-hover:scale-105 transition-all duration-300 border border-white">
-                        <div class="text-5xl font-semibold mb-2 count-up">
-                            500+
-                        </div>
-                        <div class="text-white/80 font-medium">Hospital Beds</div>
-                        <div class="text-sm text-white/60 mt-1">Available 24/7</div>
-                    </div>
+        <?php
+        $impact_stats = [
+            ['icon' => 'fa-bed-pulse',     'value' => '500+', 'label' => 'Hospital Beds',   'sub' => 'Available 24/7',  'count' => true],
+            ['icon' => 'fa-user-doctor',   'value' => '150+', 'label' => 'Medical Experts',  'sub' => 'Board Certified', 'count' => true],
+            ['icon' => 'fa-hospital-user', 'value' => '50K+', 'label' => 'Patients Served',  'sub' => 'This Year',       'count' => true],
+            ['icon' => 'fa-truck-medical', 'value' => '24/7', 'label' => 'Emergency Care',   'sub' => 'Always Ready',    'count' => false],
+        ];
+        ?>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <?php foreach ($impact_stats as $i => $s): ?>
+                <div class="bg-white/10 rounded-md p-5 sm:p-7 text-center border border-white/15 hover:bg-white/15 hover:-translate-y-1 transition-all duration-300" data-aos="zoom-in" data-aos-delay="<?= 100 + $i * 100 ?>">
+                    <span class="inline-flex w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/15 items-center justify-center mb-3 text-secondary-300 text-xl sm:text-2xl">
+                        <i class="fas <?= $s['icon'] ?>"></i>
+                    </span>
+                    <div class="text-3xl sm:text-4xl font-bold <?= $s['count'] ? 'count-up' : '' ?>"><?= $s['value'] ?></div>
+                    <div class="text-white/90 font-medium text-sm sm:text-base mt-1"><?= $s['label'] ?></div>
+                    <div class="text-xs text-white/60 mt-0.5"><?= $s['sub'] ?></div>
                 </div>
-            </div>
-
-            <div class="text-center group" data-aos="zoom-in" data-aos-delay="200">
-                <div class="relative">
-                   
-                    <div class="relative bg-transparent rounded-md p-6 group-hover:scale-105 transition-all duration-300 border border-white">
-                        <div class="text-5xl font-semibold mb-2 count-up">
-                            150+
-                        </div>
-                        <div class="text-white/80 font-medium">Medical Experts</div>
-                        <div class="text-sm text-white/60 mt-1">Board Certified</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center group" data-aos="zoom-in" data-aos-delay="300">
-                <div class="relative">
-                   
-                    <div class="relative bg-transparent rounded-md p-6 group-hover:scale-105 transition-all duration-300 border border-white">
-                        <div class="text-5xl font-semibold mb-2 count-up">
-                            50K+
-                        </div>
-                        <div class="text-white/80 font-medium">Patients Served</div>
-                        <div class="text-sm text-white/60 mt-1">This Year</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center group" data-aos="zoom-in" data-aos-delay="400">
-                <div class="relative">
-                   
-                    <div class="relative bg-transparent rounded-md p-6 group-hover:scale-105 transition-all duration-300 border border-white">
-                        <div class="text-5xl font-semibold mb-2 ">
-                            24/7
-                        </div>
-                        <div class="text-white/80 font-medium">Emergency Care</div>
-                        <div class="text-sm text-white/60 mt-1">Always Ready</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Additional Stats -->
-        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="text-center">
-                <div class="text-2xl font-bold text-white mb-1 count-up">98.5%</div>
-                <div class="text-sm text-white/70">Patient Satisfaction</div>
-            </div>
-            <div class="text-center">
-                <div class="text-2xl font-bold text-white mb-1 count-up">15min</div>
-                <div class="text-sm text-white/70">Avg. Wait Time</div>
-            </div>
-            <div class="text-center">
-                <div class="text-2xl font-bold text-white mb-1 count-up">99.9%</div>
-                <div class="text-sm text-white/70">System Uptime</div>
-            </div>
-            <div class="text-center">
-                <div class="text-2xl font-bold text-white mb-1">ISO</div>
-                <div class="text-sm text-white/70">Certified Quality</div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>
@@ -834,150 +818,34 @@
     </div>
 </section>
 
-<!-- Appointment Booking Section -->
-<section class="py-20 bg-yuki-600  text-white relative overflow-hidden">
-    <!-- Animated Background -->
-    <div class="absolute inset-0">
-        <div class="absolute top-0 left-0 w-full h-full bg-yuki-500/20  animate-gradient bg-300%"></div>
-        <div class="absolute top-20 left-20 w-40 h-40 bg-white/10 rounded-full blur-xl animate-float"></div>
-        <div class="absolute bottom-20 right-20 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float" style="animation-delay: 2s;"></div>
-    </div>
-
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12" data-aos="fade-up">
-            <h2 class="text-4xl md:text-5xl font-bold font-display mb-6">
-                Book Your <span class="text-secondary-300">Appointment</span> Today
-            </h2>
-            <p class="text-xl text-white/80 max-w-3xl mx-auto">
-                Schedule your consultation with our expert medical team. Quick, easy, and secure online booking available 24/7.
-            </p>
+<!-- Book Appointment — split hero (green panel + image) -->
+<section class="relative overflow-hidden">
+    <div class="grid lg:grid-cols-2 lg:min-h-[78vh]">
+        <!-- Green panel -->
+        <div class="relative bg-yuki-600 text-white flex items-center px-6 sm:px-10 lg:px-16 py-16 lg:py-20 order-2 lg:order-1 overflow-hidden">
+            <div class="absolute top-16 left-8 w-40 h-40 bg-white/10 rounded-full blur-xl pointer-events-none"></div>
+            <div class="absolute bottom-12 right-8 w-32 h-32 bg-white/10 rounded-full blur-xl pointer-events-none"></div>
+            <div class="relative max-w-xl" data-aos="fade-right">
+                <span class="inline-block bg-white/15 text-white text-sm font-medium px-4 py-1.5 rounded-md mb-5">Online Booking · 24/7</span>
+                <h2 class="text-4xl md:text-5xl xl:text-6xl font-bold font-display leading-tight mb-5">Book Your <span class="text-secondary-300">Appointment</span> Today</h2>
+                <p class="text-lg md:text-xl text-white/85 mb-8">
+                    Skip the queues. Schedule a consultation with our expert medical team in minutes — quick, easy and secure.
+                </p>
+                <div class="flex flex-wrap gap-3 mb-8">
+                    <span class="bg-white/15 px-4 py-2 rounded-md text-sm font-medium"><i class="fas fa-bolt text-secondary-300 mr-1.5"></i> 2-minute booking</span>
+                    <span class="bg-white/15 px-4 py-2 rounded-md text-sm font-medium"><i class="fas fa-user-doctor text-secondary-300 mr-1.5"></i> Expert specialists</span>
+                    <span class="bg-white/15 px-4 py-2 rounded-md text-sm font-medium"><i class="fas fa-shield-halved text-secondary-300 mr-1.5"></i> Secure</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="<?= url('book-appointment') ?>" class="bg-white text-yuki-700 hover:bg-gray-100 px-7 py-3.5 rounded-md font-semibold transition-colors text-center"><i class="fas fa-calendar-plus mr-2"></i> Book an Appointment</a>
+                    <a href="<?= url('login') ?>" class="border border-white/40 hover:bg-white/10 text-white px-7 py-3.5 rounded-md font-semibold transition-colors text-center"><i class="fas fa-right-to-bracket mr-2"></i> Patient Login</a>
+                </div>
+            </div>
         </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <!-- Booking Form -->
-            <div data-aos="fade-right">
-                <div class="bg-white/10 backdrop-blur-sm rounded-md p-8 border border-white/20">
-                    <h3 class="text-2xl font-bold mb-6">Quick Appointment Request</h3>
-
-                    <!-- Success/Error Messages -->
-                    <?php if (isset($_SESSION['appointment_success'])): ?>
-                        <div class="mb-6 bg-yuki-500/20 border border-yuki-400/30 text-white px-4 py-3 rounded-md backdrop-blur-sm">
-                            <div class="flex items-center">
-                                <i class="fas fa-check-circle mr-2"></i>
-                                <?php echo htmlspecialchars($_SESSION['appointment_success']); ?>
-                            </div>
-                        </div>
-                        <?php unset($_SESSION['appointment_success']); ?>
-                    <?php endif; ?>
-
-                    <?php if (isset($_SESSION['appointment_errors'])): ?>
-                        <div class="mb-6 bg-red-500/20 border border-red-400/30 text-white px-4 py-3 rounded-md backdrop-blur-sm">
-                            <div class="flex items-start">
-                                <i class="fas fa-exclamation-triangle mr-2 mt-1"></i>
-                                <div>
-                                    <?php foreach ($_SESSION['appointment_errors'] as $error): ?>
-                                        <p><?php echo htmlspecialchars($error); ?></p>
-                                    <?php endforeach; ?>
-                                </div>
-                            </div>
-                        </div>
-                        <?php unset($_SESSION['appointment_errors']); ?>
-                    <?php endif; ?>
-                    <form action="<?= url('appointment/store') ?>" method="POST" class="space-y-4" id="appointmentForm">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" name="first_name" placeholder="First Name" required
-                                   class="w-full px-4 py-3 bg-white border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yuki-400">
-                            <input type="text" name="last_name" placeholder="Last Name" required
-                                   class="w-full px-4 py-3 bg-white border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yuki-400">
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" name="middle_name" placeholder="Middle Name (Optional)"
-                                   class="w-full px-4 py-3 bg-white border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yuki-400">
-                            <input type="date" name="date_of_birth" placeholder="Date of Birth" required
-                                   class="w-full px-4 py-3 bg-white border border-gray-200 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-yuki-400">
-                        </div>
-                        <input type="email" name="email" placeholder="Email Address" required
-                               class="w-full px-4 py-3 bg-white border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yuki-400">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="tel" name="phone" placeholder="Phone Number" required
-                                   class="w-full px-4 py-3 bg-white border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yuki-400">
-                            <select name="gender" required class="w-full px-4 py-3 bg-white border border-gray-200 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-yuki-400">
-                                <option value="">Select Gender</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <input type="tel" name="emergency_contact" placeholder="Emergency Contact Number"
-                               class="w-full px-4 py-3 bg-white border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yuki-400">
-                        <input type="text" name="address" placeholder="Full Address" required
-                               class="w-full px-4 py-3 bg-white border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yuki-400">
-                        <select name="department" required class="w-full px-4 py-3 bg-white border border-gray-200 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-yuki-400">
-                            <option value="">Select Department</option>
-                            <option value="cardiology">Cardiology</option>
-                            <option value="neurology">Neurology</option>
-                            <option value="maternity">Maternity</option>
-                            <option value="emergency">Emergency</option>
-                            <option value="general">General Medicine</option>
-                            <option value="pediatrics">Pediatrics</option>
-                            <option value="orthopedics">Orthopedics</option>
-                            <option value="dermatology">Dermatology</option>
-                        </select>
-                        <input type="date" name="preferred_date" placeholder="Preferred Appointment Date" required
-                               class="w-full px-4 py-3 bg-white border border-gray-200 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-yuki-400">
-                        <input type="password" name="password" placeholder="Create Password for Patient Portal" required
-                               class="w-full px-4 py-3 bg-white border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yuki-400">
-                        <textarea name="notes" placeholder="Additional Notes (Optional)" rows="3"
-                                  class="w-full px-4 py-3 bg-white border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yuki-400 resize-none"></textarea>
-                        <button type="submit" class="w-full bg-white text-yuki-600 hover:bg-gray-100 px-6 py-4 rounded-md font-semibold transition-all duration-300 hover:scale-105 transform shadow-lg">
-                            <i class="fas fa-calendar-check mr-2"></i> Request Appointment
-                        </button>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Booking Benefits -->
-            <div data-aos="fade-left">
-                <div class="space-y-6">
-                    <div class="flex items-start">
-                        <div class="bg-white/20 rounded-full p-3 mr-4 flex-shrink-0">
-                            <i class="fas fa-clock text-white text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold mb-2">Quick & Easy Booking</h4>
-                            <p class="text-white/80">Schedule your appointment in just a few clicks. Our online system is available 24/7 for your convenience.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start">
-                        <div class="bg-white/20 rounded-full p-3 mr-4 flex-shrink-0">
-                            <i class="fas fa-user-md text-white text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold mb-2">Expert Specialists</h4>
-                            <p class="text-white/80">Connect with board-certified specialists across all medical disciplines for comprehensive care.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start">
-                        <div class="bg-white/20 rounded-full p-3 mr-4 flex-shrink-0">
-                            <i class="fas fa-shield-alt text-white text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold mb-2">Secure & Private</h4>
-                            <p class="text-white/80">Your personal information is protected with industry-leading security and HIPAA compliance.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-white/10 rounded-md p-6 mt-8">
-                        <h4 class="text-lg font-bold mb-3">Already a Patient?</h4>
-                        <p class="text-white/80 mb-4">Access your patient portal for faster booking and medical records.</p>
-                        <a href="<?= url('book-appointment') ?>" class="bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-md font-medium transition-all duration-200 inline-block">
-                            <i class="fas fa-sign-in-alt mr-2"></i> Patient Login
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <!-- Image -->
+        <div class="relative min-h-[42vh] lg:min-h-0 order-1 lg:order-2">
+            <img src="<?= asset('images/loginbackgrounds.png') ?>" alt="Book an appointment at Yibera"
+                 class="absolute inset-0 w-full h-full object-cover object-right">
         </div>
     </div>
 </section>
@@ -1221,21 +1089,20 @@
                 <div class="group" data-aos="fade-up" data-aos-delay="<?php echo $delay; ?>">
                     <div class="relative h-full">
                         <div class="absolute inset-0 <?php echo $card['glow']; ?> rounded-md blur-lg opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
-                        <div class="relative bg-white  rounded-md overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100  h-full flex flex-col">
-                            <div class="h-48 overflow-hidden">
+                        <div class="relative bg-white rounded-md overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 h-full flex flex-col">
+                            <div class="relative h-48 overflow-hidden">
                                 <img src="<?php echo $card['image']; ?>" alt="<?php echo htmlspecialchars($card['alt'], ENT_QUOTES); ?>" class="w-full h-full object-cover object-center">
+                                <div class="absolute inset-0 bg-linear-to-t from-black/35 to-transparent"></div>
+                                <!-- green list number -->
+                                <span class="absolute top-3 left-3 w-11 h-11 rounded-md bg-yuki-600 text-white font-bold text-lg flex items-center justify-center shadow-lg ring-2 ring-white/40"><?php echo sprintf('%02d', $index + 1); ?></span>
                             </div>
                             <div class="p-6 flex flex-col flex-1">
-                                <h3 class="text-xl font-bold text-gray-900  mb-3">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">
                                     <?php echo htmlspecialchars($card['title'], ENT_QUOTES); ?>
                                 </h3>
-                                <p class="text-gray-600  mb-4 leading-relaxed">
+                                <p class="text-gray-600 leading-relaxed">
                                     <?php echo htmlspecialchars($card['description'], ENT_QUOTES); ?>
                                 </p>
-                                <div class="flex items-center text-sm font-medium mt-auto <?php echo $card['icon_color']; ?>">
-                                    <i class="<?php echo $card['icon']; ?> mr-2"></i>
-                                    <span><?php echo htmlspecialchars($card['stat'], ENT_QUOTES); ?></span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -1468,6 +1335,18 @@ const coreValuesSwiper = new Swiper('.core-values-swiper', {
         }
     }
 });
+
+// Our Journey (mobile only): auto-scroll, no arrows, sleek progress bar
+if (document.querySelector('.journey-swiper')) {
+    new Swiper('.journey-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        loop: true,
+        grabCursor: true,
+        autoplay: { delay: 2800, disableOnInteraction: false },
+        pagination: { el: '.journey-progress', type: 'progressbar' },
+    });
+}
 
 const swiperNavActiveClasses = [
     '',
