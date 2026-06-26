@@ -350,13 +350,16 @@ class PatientAuthController extends Controller
         $_SESSION['otp_purpose']    = $purpose;
 
         $minutes = (int) (self::OTP_TTL / 60);
-        Mailer::send(
-            $email,
-            'Your Yibera verification code',
-            "<p>Your verification code is:</p>"
-            . "<p style='font-size:24px;font-weight:bold;letter-spacing:4px'>$code</p>"
-            . "<p>It expires in $minutes minutes. If you didn't request this, you can ignore this email.</p>"
-        );
+        $body = render_view('emails/otp', [
+            'code'       => $code,
+            'minutes'    => $minutes,
+            'logoUrl'    => asset_abs('images/yiberalogo1.png'),
+            'contactUrl' => abs_url('contact'),
+            'subtext'    => $purpose === 'reset'
+                ? 'Use the code below to verify your email and reset your Yibera password.'
+                : 'Use the code below to continue signing in to your Yibera account.',
+        ]);
+        Mailer::send($email, 'Your Yibera verification code', $body);
     }
 
     private function clearOtpSession(): void

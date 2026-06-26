@@ -49,6 +49,10 @@ spl_autoload_register(function (string $class): void {
 
 require BASE_PATH . '/app/core/helpers.php';
 
+// --- Global error/exception safety net -----------------------------------
+// Logs failures and shows a friendly page instead of leaking a stack trace.
+ErrorHandler::register();
+
 // --- One-time database schema setup --------------------------------------
 try {
     if (!isset($_SESSION['schema_ready'])) {

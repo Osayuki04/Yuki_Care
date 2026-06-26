@@ -35,6 +35,43 @@ if (!function_exists('asset')) {
     }
 }
 
+if (!function_exists('app_origin')) {
+    /** Scheme + host of the current request, e.g. https://yibera.com. */
+    function app_origin(): string
+    {
+        $https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+            || (($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https');
+        return ($https ? 'https' : 'http') . '://' . ($_SERVER['HTTP_HOST'] ?? 'localhost');
+    }
+}
+
+if (!function_exists('abs_url')) {
+    /** Absolute internal URL (with scheme + host) — needed in emails. */
+    function abs_url(string $page = 'home'): string
+    {
+        return app_origin() . url($page);
+    }
+}
+
+if (!function_exists('asset_abs')) {
+    /** Absolute URL to a static asset (with scheme + host) — needed in emails. */
+    function asset_abs(string $path): string
+    {
+        return app_origin() . asset($path);
+    }
+}
+
+if (!function_exists('render_view')) {
+    /** Render a view file to a string (used for building HTML emails). */
+    function render_view(string $view, array $data = []): string
+    {
+        extract($data, EXTR_SKIP);
+        ob_start();
+        require BASE_PATH . '/app/views/' . $view . '.php';
+        return ob_get_clean();
+    }
+}
+
 if (!function_exists('redirect')) {
     /** Redirect to an internal route and stop execution. */
     function redirect(string $page): void
