@@ -13,24 +13,56 @@
         .nav-link-active::after { width: 80%; }
         .nav-link-hover::after  { width: 0%; transition: width 0.3s ease; }
         .nav-link-hover:hover::after { width: 80%; }
+
+        /* ===== Loading screen — minimal, pure white ===== */
+        .ls-mark { transform-origin: 50% 50%; animation: lsPulse 1.6s ease-in-out infinite; }
+        @keyframes lsPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+        .ls-dots::after { content: ''; animation: lsDots 1.5s steps(1, end) infinite; }
+        @keyframes lsDots { 0% { content: ''; } 25% { content: '.'; } 50% { content: '..'; } 75% { content: '...'; } }
+        @media (prefers-reduced-motion: reduce) {
+            .ls-mark { animation: none; }
+            .ls-dots::after { content: '…'; }
+        }
     </style>
 </head>
 <body class="bg-gray-50 font-sans overflow-x-hidden">
 
     <!-- Loading screen -->
-    <div id="loading-screen" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
-        <div class="text-center">
-            <div class="mb-6 flex justify-center">
-                <div class="bg-white p-4 rounded-md shadow-lg">
-                    <img src="<?= asset('images/yiberalogo2.png') ?>" alt="Yibera Hospital Logo" width="500" height="500" class="w-28 h-28 object-contain">
-                </div>
-            </div>
-            <h2 class="text-2xl font-bold font-display mb-2 text-yuki-600">Yibera</h2>
-            <p class="text-gray-600 mb-4">Your path to quality healthcare</p>
-            <div class="w-48 h-2 bg-gray-200 rounded-full mx-auto overflow-hidden">
-                <div class="h-full bg-yuki-600 rounded-full" style="width: 100%; animation: loadingBar 1.2s ease-in-out;"></div>
-            </div>
+    <div id="loading-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white">
+
+        <div class="flex  items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" width = "40" height = "40" class="">
+                <path d="M58 26
+                    C47 15 29 16 20 28
+                    C10 41 13 58 27 69
+                    L38 78
+
+                    M58 26
+                    C69 15 88 16 98 29
+                    C107 41 105 58 93 70
+                    L61 104
+
+                    M61 104
+                    C57 109 50 109 46 105"
+                    stroke="#2f7d57"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+
+                <path
+                    d="M48 48
+                    L60 60
+                    L72 46"
+                    stroke="#2f7d57"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+            </svg>
+            <h1 style="color:#2f7d57" class="font-bold font-display text-[#2f7d57] text-xl sm:text-2xl lg:text-3xl leading-tight">Yibera</h1>
+                    
         </div>
+
+        <span class="mt-2 text-sm text-gray-400 tracking-wide">Loading<span class="ls-dots"></span></span>
     </div>
 
     <?php require BASE_PATH . '/app/views/partials/nav.php'; ?>
@@ -62,7 +94,7 @@
                     ls.style.transition = 'opacity 0.5s ease-out';
                     setTimeout(() => ls.style.display = 'none', 500);
                 }
-            }, 900);
+            }, 1200);
 
             // AOS
             if (window.AOS) AOS.init({ duration: 700, easing: 'ease-in-out', once: true, offset: 80 });

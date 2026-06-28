@@ -27,7 +27,7 @@
                 <div class="xl:hidden w-full text-center px-3 mt-3">
                     <h1 class="text-xl sm:text-3xl font-bold text-black scale-y-130 tracking-tight leading-tight">
                         <span class="block">Your Healthcare Hub</span>
-                         <span class="block italic text-yuki-600 -mt-2">For Quality Patients Care Worldwide</span>
+                         <span class="block italic text-yuki-600 -mt-2">For Patients Care Worldwide</span>
                     </h1>
                     <p class="text-sm sm:text-base text-gray-600 mt-3 max-w-xl mx-auto">
                         Experience the future of healthcare management with AI-powered diagnostics,
@@ -41,7 +41,7 @@
                     <img src="<?= asset('images/newheroPicture.png') ?>"
                          alt="Yibera – Advanced Healthcare"
                          width="1536" height="1024" fetchpriority="high" decoding="async"
-                         class="hero-notch  absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                         class="hero-notch  absolute inset-0 w-full h-full object-cover object-right  transition-transform duration-700 hover:scale-101">
 
                     <!-- CTA buttons sitting inside the notch -->
                     <div class="absolute top-0 left-0 right-0 sm:right-auto md:ml-6 h-16 sm:h-[76px] flex items-center gap-3">
@@ -826,16 +826,11 @@
             <div class="absolute top-16 left-8 w-40 h-40 bg-white/10 rounded-full blur-xl pointer-events-none"></div>
             <div class="absolute bottom-12 right-8 w-32 h-32 bg-white/10 rounded-full blur-xl pointer-events-none"></div>
             <div class="relative max-w-xl" data-aos="fade-right">
-                <span class="inline-block bg-white/15 text-white text-sm font-medium px-4 py-1.5 rounded-md mb-5">Online Booking · 24/7</span>
-                <h2 class="text-4xl md:text-5xl xl:text-6xl font-bold font-display leading-tight mb-5">Book Your <span class="text-secondary-300">Appointment</span> Today</h2>
+                <h2 class="text-4xl md:text-5xl font-semibold text-center   font-display leading-tight mb-5">Book Your <span class="text-secondary-300">Appointment</span> Today</h2>
                 <p class="text-lg md:text-xl text-white/85 mb-8">
-                    Skip the queues. Schedule a consultation with our expert medical team in minutes — quick, easy and secure.
+                    Skip the queues. Schedule a consultation with our expert medical team in minutes, quick, easy and secure.
                 </p>
-                <div class="flex flex-wrap gap-3 mb-8">
-                    <span class="bg-white/15 px-4 py-2 rounded-md text-sm font-medium"><i class="fas fa-bolt text-secondary-300 mr-1.5"></i> 2-minute booking</span>
-                    <span class="bg-white/15 px-4 py-2 rounded-md text-sm font-medium"><i class="fas fa-user-doctor text-secondary-300 mr-1.5"></i> Expert specialists</span>
-                    <span class="bg-white/15 px-4 py-2 rounded-md text-sm font-medium"><i class="fas fa-shield-halved text-secondary-300 mr-1.5"></i> Secure</span>
-                </div>
+
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="<?= url('book-appointment') ?>" class="bg-white text-yuki-700 hover:bg-gray-100 px-7 py-3.5 rounded-md font-semibold transition-colors text-center"><i class="fas fa-calendar-plus mr-2"></i> Book an Appointment</a>
                     <a href="<?= url('login') ?>" class="border border-white/40 hover:bg-white/10 text-white px-7 py-3.5 rounded-md font-semibold transition-colors text-center"><i class="fas fa-right-to-bracket mr-2"></i> Patient Login</a>

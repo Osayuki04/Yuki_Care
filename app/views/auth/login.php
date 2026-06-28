@@ -17,11 +17,38 @@
 
             <!-- logo -->
             <a href="<?= url('home') ?>" class="relative flex items-center gap-3">
-                <img src="<?= asset('images/yiberalogo1.png') ?>" alt="Yibera" class="h-16 w-auto object-contain">
-                <div>
-                    <p class="text-lg font-bold leading-tight text-white">Yibera</p>
-                    <p class="text-sm text-yuki-100">Medical Center</p>
-                </div>
+            <div class="flex  items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" width = "40" height = "40" class="">
+                <path d="M58 26
+                    C47 15 29 16 20 28
+                    C10 41 13 58 27 69
+                    L38 78
+
+                    M58 26
+                    C69 15 88 16 98 29
+                    C107 41 105 58 93 70
+                    L61 104
+
+                    M61 104
+                    C57 109 50 109 46 105"
+                    stroke="#fff"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+
+                <path
+                    d="M48 48
+                    L60 60
+                    L72 46"
+                    stroke="#ffff"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+            </svg>
+            <h1 class="font-bold font-display text-white text-xl sm:text-2xl lg:text-3xl leading-tight">Yibera</h1>
+                    
+        </div>
+
             </a>
 
             <!-- pitch -->
@@ -38,7 +65,38 @@
             <div class="w-full max-w-md">
                 <!-- mobile wordmark (logo image removed on mobile) -->
                 <a href="<?= url('home') ?>" class="lg:hidden flex items-center justify-center mb-8">
-                    <span class="text-xl font-bold text-gray-900">Yibera</span>
+                <div class="flex  items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" width = "40" height = "40" class="">
+                <path d="M58 26
+                    C47 15 29 16 20 28
+                    C10 41 13 58 27 69
+                    L38 78
+
+                    M58 26
+                    C69 15 88 16 98 29
+                    C107 41 105 58 93 70
+                    L61 104
+
+                    M61 104
+                    C57 109 50 109 46 105"
+                    stroke="#fff"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+
+                <path
+                    d="M48 48
+                    L60 60
+                    L72 46"
+                    stroke="#ffff"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+            </svg>
+            <h1 class="font-bold font-display text-white text-xl sm:text-2xl lg:text-3xl leading-tight">Yibera</h1>
+                    
+        </div>
+
                 </a>
 
                 <div class="mb-8 text-center lg:text-left">

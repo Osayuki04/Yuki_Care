@@ -16,10 +16,40 @@ $links = [
 <div id="staffSidebar" class="bg-white w-64 h-full shadow-lg border-r border-gray-200 flex flex-col
             fixed lg:static inset-y-0 left-0 z-40 -translate-x-full lg:translate-x-0 transition-transform duration-200 ease-in-out">
     <div class="flex items-center p-6 border-b border-gray-200">
-        <a href="<?= url('home') ?>" class="flex items-center group">
-            <img src="<?= asset('images/yiberalogo2.png') ?>" alt="Yibera" class="h-12 w-auto object-contain mr-3">
+        <a href="<?= url('home') ?>" class="flex flex-col items-center group">
+        <div class="flex  items-center gap-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" width = "40" height = "40" class="">
+                <path d="M58 26
+                    C47 15 29 16 20 28
+                    C10 41 13 58 27 69
+                    L38 78
+
+                    M58 26
+                    C69 15 88 16 98 29
+                    C107 41 105 58 93 70
+                    L61 104
+
+                    M61 104
+                    C57 109 50 109 46 105"
+                    stroke="#2f7d57"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+
+                <path
+                    d="M48 48
+                    L60 60
+                    L72 46"
+                    stroke="#2f7d57"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+            </svg>
+            <h2 style="color:#2f7d57" class="font-bold font-display text-[#2f7d57] text-xl sm:text-2xl lg:text-3xl leading-tight">Yibera</h2>
+                    
+             </div>
             <div>
-                <h2 class="text-lg font-bold text-gray-900">Yibera</h2>
+            
                 <p class="text-xs text-yuki-600 font-medium">Staff Portal</p>
             </div>
         </a>

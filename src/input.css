@@ -89,14 +89,35 @@
 
 /* Home hero: a notch cut from the image so the CTA buttons read as part of it.
    Full-width strip on mobile; a top-left rectangle on >= sm. */
-.hero-notch {
-  clip-path: polygon(0 64px, 100% 64px, 100% 100%, 0 100%);
-}
-@media (min-width: 640px) {
-  .hero-notch {
-    clip-path: polygon(440px 0, 100% 0, 100% 100%, 0 100%, 0 76px, 440px 76px);
+   .hero-notch {
+    position: relative;
+    background: white;
+    clip-path: polygon(
+      400px 0,
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 76px,
+      440px 76px
+    );
   }
-}
+  
+  .hero-notch::before {
+    content: "";
+    position: absolute;
+    inset: -2px; /* Border thickness */
+    background: #d1d5db; /* Tailwind border-gray-300 */
+    z-index: -1;
+  
+    clip-path: polygon(
+      400px 0,
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 76px,
+      440px 76px
+    );
+  }
 
 /* Dashboard liveliness ------------------------------------------------ */
 

@@ -25,19 +25,43 @@
         <div class="hidden lg:grid lg:grid-cols-12 gap-10">
             <!-- Brand -->
             <div class="lg:col-span-4">
-                <div class="flex items-center gap-2 mb-4">
-                    <img src="<?= asset('images/yiberalogo1.png') ?>" alt="Yibera" width="500" height="500" class="h-12 w-auto object-contain">
-                    <span class="text-2xl font-bold">Yibera</span>
-                </div>
-                <p class="text-white/80 leading-relaxed max-w-sm">
-                    Advanced healthcare delivered with compassion — quality patient care, modern technology, and a team you can trust.
+            <div class="flex  items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" width = "40" height = "40" class="">
+                <path d="M58 26
+                    C47 15 29 16 20 28
+                    C10 41 13 58 27 69
+                    L38 78
+
+                    M58 26
+                    C69 15 88 16 98 29
+                    C107 41 105 58 93 70
+                    L61 104
+
+                    M61 104
+                    C57 109 50 109 46 105"
+                    stroke="#fff"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+
+                <path
+                    d="M48 48
+                    L60 60
+                    L72 46"
+                    stroke="#ffff"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+            </svg>
+            <h1 class="font-bold font-display text-white text-xl sm:text-2xl lg:text-3xl leading-tight">Yibera</h1>
+                    
+        </div>
+
+                <p class="text-white/80 leading-relaxed max-w-sm mt-2">
+                    Advanced healthcare delivered with compassion  Quality patient care, modern technology, and a team you can trust.
                 </p>
-                <div class="flex flex-wrap gap-2 mt-5">
-                    <span class="bg-white/10 text-xs px-3 py-1.5 rounded-md"><i class="fas fa-shield-heart text-secondary-300 mr-1"></i> HIPAA Compliant</span>
-                    <span class="bg-white/10 text-xs px-3 py-1.5 rounded-md"><i class="fas fa-certificate text-secondary-300 mr-1"></i> ISO Certified</span>
-                </div>
                 <div class="flex items-center gap-3 mt-6">
-                    <?php foreach (['fa-facebook-f' => 'Facebook', 'fa-x-twitter' => 'Twitter', 'fa-instagram' => 'Instagram', 'fa-linkedin-in' => 'LinkedIn'] as $icon => $label): ?>
+                    <?php foreach (['fa-facebook-f' => 'Facebook', 'fa-x' => 'X', 'fa-instagram' => 'Instagram', 'fa-linkedin-in' => 'LinkedIn'] as $icon => $label): ?>
                         <a href="#" aria-label="<?= $label ?>" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white hover:text-yuki-600 flex items-center justify-center transition-colors"><i class="fab <?= $icon ?>"></i></a>
                     <?php endforeach; ?>
                 </div>
@@ -80,8 +104,38 @@
         <!-- Mobile / tablet: compact & centered -->
         <div class="lg:hidden text-center">
             <a href="<?= url('home') ?>" class="inline-flex items-center gap-2 mb-3">
-                <img src="<?= asset('images/yiberalogo1.png') ?>" alt="Yibera" width="500" height="500" class="h-10 w-auto object-contain">
-                <span class="text-xl font-bold">Yibera</span>
+            <div class="flex  items-center gap-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" width = "40" height = "40" class="">
+                <path d="M58 26
+                    C47 15 29 16 20 28
+                    C10 41 13 58 27 69
+                    L38 78
+
+                    M58 26
+                    C69 15 88 16 98 29
+                    C107 41 105 58 93 70
+                    L61 104
+
+                    M61 104
+                    C57 109 50 109 46 105"
+                    stroke="#fff"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+
+                <path
+                    d="M48 48
+                    L60 60
+                    L72 46"
+                    stroke="#ffff"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+            </svg>
+            <h1 class="font-bold font-display text-white text-xl sm:text-2xl lg:text-3xl leading-tight">Yibera</h1>
+                    
+             </div>
+
             </a>
             <p class="text-white/80 text-sm max-w-xs mx-auto mb-6">Advanced healthcare, delivered with compassion.</p>
 
@@ -93,13 +147,13 @@
                 <a href="<?= url('book-appointment') ?>" class="hover:text-white transition-colors">Book</a>
             </nav>
 
-            <div class="flex flex-col items-center gap-2.5 text-sm text-white/85 mb-6">
+            <div class="flex  items-center gap-2.5 text-sm justify-center text-white/85 mb-6">
                 <a href="tel:+4401902321000" class="inline-flex items-center gap-2 hover:text-white transition-colors"><i class="fas fa-phone text-secondary-300"></i> +44 (0)1902 321000</a>
-                <a href="mailto:info@yibera.com" class="inline-flex items-center gap-2 hover:text-white transition-colors"><i class="fas fa-envelope text-secondary-300"></i> info@yibera.com</a>
+                <a href="mailto:info@yibera.com" class="inline-flex items-center gap-2 hover:text-white transition-colors"><i class="fas fa-envelope text-secondary-300"></i> osayuki@yibera.com</a>
             </div>
 
             <div class="flex justify-center gap-3">
-                <?php foreach (['fa-facebook-f' => 'Facebook', 'fa-x-twitter' => 'Twitter', 'fa-instagram' => 'Instagram', 'fa-linkedin-in' => 'LinkedIn'] as $icon => $label): ?>
+                <?php foreach (['fa-facebook-f' => 'Facebook', 'fa-x' => 'X', 'fa-instagram' => 'Instagram', 'fa-linkedin-in' => 'LinkedIn'] as $icon => $label): ?>
                     <a href="#" aria-label="<?= $label ?>" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-yuki-600 flex items-center justify-center transition-colors"><i class="fab <?= $icon ?>"></i></a>
                 <?php endforeach; ?>
             </div>

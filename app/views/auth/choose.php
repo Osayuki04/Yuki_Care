@@ -45,8 +45,39 @@ $options = [
     <div class="relative min-h-screen flex flex-col items-center justify-center px-4 py-12">
         <!-- Brand (logo desktop only) -->
         <div class="text-center mb-10">
-            <img src="<?= asset('images/yiberalogo1.png') ?>" alt="Yibera" class="hidden sm:block h-20 w-auto object-contain mx-auto mb-4 drop-shadow-lg">
-            <h1 class="text-3xl sm:text-4xl font-bold text-white">Welcome to <span class="text-secondary-300">Yibera</span></h1>
+        <div class="flex  items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" width = "40" height = "40" class="">
+                <path d="M58 26
+                    C47 15 29 16 20 28
+                    C10 41 13 58 27 69
+                    L38 78
+
+                    M58 26
+                    C69 15 88 16 98 29
+                    C107 41 105 58 93 70
+                    L61 104
+
+                    M61 104
+                    C57 109 50 109 46 105"
+                    stroke="#fff"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+
+                <path
+                    d="M48 48
+                    L60 60
+                    L72 46"
+                    stroke="#ffff"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+            </svg>
+            <h1 class="font-bold font-display text-white text-xl sm:text-2xl lg:text-3xl leading-tight">Yibera</h1>
+                    
+        </div>
+
+            <h1 class="text-3xl sm:text-4xl font-bold text-white mt-4">Welcome to <span class="text-secondary-300">Yibera</span></h1>
             <p class="text-white/85 mt-2 text-base sm:text-lg">Choose how you'd like to sign in</p>
         </div>
 
