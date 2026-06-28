@@ -169,13 +169,11 @@ class Mailer
         if ($cfg !== null) {
             return $cfg;
         }
-        // A gitignored local override takes precedence over the committed defaults.
-        foreach (['/config/mail.local.php', '/config/mail.php'] as $path) {
-            if (is_file(BASE_PATH . $path)) {
-                $cfg = require BASE_PATH . $path;
-                return $cfg;
-            }
+        $path = BASE_PATH . '/config/mail.php';
+        if (is_file($path)) {
+            return $cfg = require $path;
         }
+        // No config on this environment yet — log instead of sending.
         return $cfg = ['smtp' => ['enabled' => false], 'from' => 'no-reply@yibera.local', 'from_name' => 'Yibera'];
     }
 

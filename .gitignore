@@ -9,8 +9,8 @@ storage/mail.log
 # ---- Local secrets / env ---------------------------------------------------
 .env
 .env.local
-/config/mail.local.php
-/config/database.local.php
+/config/mail.php
+/config/database.php
 
 # ---- OS / editor junk ------------------------------------------------------
 .DS_Store

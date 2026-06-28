@@ -38,7 +38,7 @@ class Database
             } catch (mysqli_sql_exception $e2) {
                 error_log('Database connection failed: ' . $e2->getMessage());
                 throw new RuntimeException(
-                    'Database connection failed. Check config/database.php (or database.local.php) and that MySQL is running.',
+                    'Database connection failed. Check config/database.php and that MySQL is running.',
                     0,
                     $e2
                 );
@@ -53,14 +53,13 @@ class Database
     /** Load DB settings, preferring a gitignored local override so secrets stay out of git. */
     private static function config(): array
     {
-        foreach (['/config/database.local.php', '/config/database.php'] as $path) {
-            if (is_file(BASE_PATH . $path)) {
-                return require BASE_PATH . $path;
-            }
+        $path = BASE_PATH . '/config/database.php';
+        if (!is_file($path)) {
+            throw new RuntimeException(
+                'Missing config/database.php — it is gitignored, so create it on this server with your DB credentials.'
+            );
         }
-        throw new RuntimeException(
-            'Database config missing. Copy config/database.example.php to config/database.local.php and add your credentials.'
-        );
+        return require $path;
     }
 
     /**

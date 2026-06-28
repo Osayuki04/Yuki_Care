@@ -110,16 +110,16 @@
 .reveal-up { opacity: 0; animation: revealUp 0.5s ease-out forwards; }
 @media (prefers-reduced-motion: reduce) { .reveal-up { opacity: 1; animation: none; } }
 
-/* Our Journey — sleek inline progress bar for the mobile swiper */
+/* Our Journey — green progress bar attached to the top of the image */
 .journey-progress.swiper-pagination-progressbar {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 4px;
-  border-radius: 9999px;
-  background: rgba(5, 150, 105, 0.15);
-  overflow: hidden;
+  height: 5px;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.45);
 }
 .journey-progress .swiper-pagination-progressbar-fill {
   background: #059669;
-  border-radius: 9999px;
 }
